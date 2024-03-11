@@ -1,6 +1,20 @@
-site_name: Swarovski SOComm SDK and OpenAPI Documentation
+site_name: Swarovski Optik OpenAPI Documentation
 site_url: https://swarovskioptik.github.io/openapi-docu/
 theme:
   name: readthedocs
 nav:
   - Home: 'index.md'
+  - Introduction:
+    - 'intro/ax-visio.md'
+    - 'intro/so-comm-sdk.md'
+    - 'intro/openapi.md'
+    - 'intro/kotlin-extensions.md'
+  - Tutorials:
+    - 'tutorial/how-to-add-the-so-comm-sdk.md'
+    - 'tutorial/how-to-request-an-api-key.md'
+  - References:
+    - 'ref/releases.md'
+    - 'ref/api-reference.md'
+    - 'ref/example-applications.md'
+    - 'ref/glossary.md'
+  - Impressum: 'impressum.md'
