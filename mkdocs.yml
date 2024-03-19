@@ -1,0 +1,6 @@
+site_name: Swarovski SOComm SDK and OpenAPI Documentation
+site_url: https://swarovskioptik.github.io/openapi-docu/
+theme:
+  name: readthedocs
+nav:
+  - Home: 'index.md'
