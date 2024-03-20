@@ -11,7 +11,6 @@ nav:
     - 'intro/kotlin-extensions.md'
   - Tutorials:
     - 'tutorial/how-to-add-the-so-comm-sdk.md'
-    - 'tutorial/how-to-request-an-api-key.md'
   - References:
     - 'ref/releases.md'
     - 'ref/api-reference.md'
