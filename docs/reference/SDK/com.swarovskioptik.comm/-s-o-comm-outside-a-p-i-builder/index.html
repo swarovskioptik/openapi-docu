@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SOCommOutsideAPIBuilder</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SDK:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SDK::com.swarovskioptik.comm/SOCommOutsideAPIBuilder///PointingToDeclaration//1607690379">
+  <div class="breadcrumbs"><a href="../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">com.swarovskioptik.comm</a><span class="delimiter">/</span><span class="current">SOCommOutsideAPIBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>SOComm</span><wbr><span>Outside</span><wbr><span><span>APIBuilder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SOCommOutsideAPIBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">Builder to create instances of <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a>. Use this builder to instantiate the <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a>.</p><p class="paragraph">Only use one instance of an <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> at a time (it should be enough to create one instance of the <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> per lifecycle (of your application / service)).</p><p class="paragraph">An example usage of the builder would be:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">SOCommOutsideAPIBuilder(androidContext())<br>   .apiKey("YOUR-API-KEY")   //theoretically optional, however, you won't be able to do much on the remote device without a valid API KEY.<br>   .debugLogs { tag, message -&gt; Log.d(tag, message) } //optional, should only be enabled in debug builds, and might just flood your logcat.<br>   .warningLogs { tag, message -&gt; Log.w(tag, message) } //optional, will log only warnings, you need to decide whether you want to log warnings to somewhere (even in your production code)<br>   .errorLogs { tag, message -&gt; Log.e(tag, message) } //optional, will log only errors, you need to decide whether you want to log errors to somewhere (even in your production code)<br>   .build()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A <a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a> of your application / activity / service. This context <strong>does not</strong> need to be an activity, it can be any context of your application.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1795556661%2FConstructors%2F1607690379" anchor-label="SOCommOutsideAPIBuilder" id="1795556661%2FConstructors%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-o-comm-outside-a-p-i-builder.html"><span>SOComm</span><wbr><span>Outside</span><wbr><span><span>APIBuilder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1795556661%2FConstructors%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="63103839%2FFunctions%2F1607690379" anchor-label="apiKey" id="63103839%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-key.html"><span>api</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="63103839%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="api-key.html"><span class="token function">apiKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">The <code class="lang-kotlin">API KEY</code> for the remote device to authenticate this SDK on the remote device. This <a href="api-key.html">apiKey</a> will be used to authenticate when connecting to the remote device.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-530644190%2FFunctions%2F1607690379" anchor-label="build" id="-530644190%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-530644190%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a></div><div class="brief "><p class="paragraph">Creates an instance of <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> with the parameters defined on this <a href="index.html">SOCommOutsideAPIBuilder</a> object.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-794747711%2FFunctions%2F1607690379" anchor-label="buildWifiOnly" id="-794747711%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build-wifi-only.html"><span>build</span><wbr><span>Wifi</span><wbr><span><span>Only</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794747711%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="build-wifi-only.html"><span class="token function">buildWifiOnly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-s-o-comm-outside-wifi-only-a-p-i/index.html">SOCommOutsideWifiOnlyAPI</a></div><div class="brief "><p class="paragraph">Creates an instance of <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> with the parameters defined on this <a href="index.html">SOCommOutsideAPIBuilder</a> object for special API access (wifi-only).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1257145317%2FFunctions%2F1607690379" anchor-label="debugLogs" id="1257145317%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="debug-logs.html"><span>debug</span><wbr><span><span>Logs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1257145317%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="debug-logs.html"><span class="token function">debugLogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sink<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>tag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">If you want enable debug-logs to be logged, provide a lambda here.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1660480368%2FFunctions%2F1607690379" anchor-label="errorLogs" id="-1660480368%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="error-logs.html"><span>error</span><wbr><span><span>Logs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1660480368%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="error-logs.html"><span class="token function">errorLogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sink<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>tag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">If you want enable error-logs to be logged, provide a lambda here.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="573011517%2FFunctions%2F1607690379" anchor-label="useCustomWifiEnableDialog" id="573011517%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use-custom-wifi-enable-dialog.html"><span>use</span><wbr><span>Custom</span><wbr><span>Wifi</span><wbr><span>Enable</span><wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="573011517%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="use-custom-wifi-enable-dialog.html"><span class="token function">useCustomWifiEnableDialog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">useCustomWifiEnableDialog<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">If set to true, will use a custom dialog to prompt users to enable WIFI instead of the vendor provided dialog. Default: false (will use the default vendor dialog by default)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1293260868%2FFunctions%2F1607690379" anchor-label="warningLogs" id="-1293260868%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="warning-logs.html"><span>warning</span><wbr><span><span>Logs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1293260868%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="warning-logs.html"><span class="token function">warningLogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sink<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>tag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">If you want enable warning-logs to be logged, provide a lambda here.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1285818690%2FFunctions%2F1607690379" anchor-label="wifiKeepAliveGracePeriod" id="1285818690%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="wifi-keep-alive-grace-period.html"><span>wifi</span><wbr><span>Keep</span><wbr><span>Alive</span><wbr><span>Grace</span><wbr><span><span>Period</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1285818690%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="wifi-keep-alive-grace-period.html"><span class="token function">wifiKeepAliveGracePeriod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">seconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">SOCommOutsideAPIBuilder</a></div><div class="brief "><p class="paragraph">A wifi connection will be established when using a WIFI context, and will be teared down again after the last wifi context has been released.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

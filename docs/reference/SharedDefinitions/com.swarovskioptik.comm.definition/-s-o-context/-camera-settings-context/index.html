@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CameraSettingsContext</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SharedDefinitions:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SharedDefinitions::com.swarovskioptik.comm.definition/SOContext.CameraSettingsContext///PointingToDeclaration//1641132287">
+  <div class="breadcrumbs"><a href="../../../index.html">SharedDefinitions</a><span class="delimiter">/</span><a href="../../index.html">com.swarovskioptik.comm.definition</a><span class="delimiter">/</span><a href="../index.html">SOContext</a><span class="delimiter">/</span><span class="current">CameraSettingsContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Camera</span><wbr><span>Settings</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">CameraSettingsContext</a> : <a href="../index.html">SOContext</a></div><p class="paragraph">Context for camera settings for all Inside Apps excluding the Open API Inside App.</p><p class="paragraph">Provides the following topics:</p><ul><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-auto-exposure-priority/index.html">SetAutoExposurePriority</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-white-balance-mode/index.html">SetWhiteBalanceMode</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-white-balance-manual-value/index.html">SetWhiteBalanceManualValue</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-video-record-frame-rate/index.html">SetVideoRecordFrameRate</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-iso-value/index.html">SetIsoValue</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-manual-exposure/index.html">SetManualExposure</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-exposure-compensation/index.html">SetExposureCompensation</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-picture-brightness/index.html">SetPictureBrightness</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-picture-contrast/index.html">SetPictureContrast</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-picture-gamma/index.html">SetPictureGamma</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-picture-saturation/index.html">SetPictureSaturation</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-picture-sharpness/index.html">SetPictureSharpness</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-video-record-resolution/index.html">SetVideoRecordResolution</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-live-stream-video-stabilization/index.html">SetLiveStreamVideoStabilization</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-set-record-video-stabilization/index.html">SetRecordVideoStabilization</a> (smartphone -&gt; device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-auto-exposure-priority-status/index.html">AutoExposurePriorityStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-white-balance-mode-status/index.html">WhiteBalanceModeStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-white-balance-manual-value-status/index.html">WhiteBalanceManualValueStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-video-record-frame-rate-status/index.html">VideoRecordFrameRateStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-iso-value-status/index.html">IsoValueStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-manual-exposure-status/index.html">ManualExposureStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-exposure-compensation-status/index.html">ExposureCompensationStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-picture-brightness-status/index.html">PictureBrightnessStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-picture-contrast-status/index.html">PictureContrastStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-picture-gamma-status/index.html">PictureGammaStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-picture-saturation-status/index.html">PictureSaturationStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-picture-sharpness-status/index.html">PictureSharpnessStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-video-record-resolution-status/index.html">VideoRecordResolutionStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-live-stream-video-stabilization-status/index.html">LiveStreamVideoStabilizationStatus</a> (smartphone &lt;- device)</p></li><li><p class="paragraph"><a href="../../../com.swarovskioptik.comm.definition.topic/-record-video-stabilization-status/index.html">RecordVideoStabilizationStatus</a> (smartphone &lt;- device)</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="604018766%2FProperties%2F1641132287" anchor-label="connectionType" id="604018766%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../connection-type.html"><span>connection</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="604018766%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../connection-type.html">connectionType</a><span class="token operator">: </span><a href="../../-connection-type/index.html">ConnectionType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-306248890%2FProperties%2F1641132287" anchor-label="fileTopics" id="-306248890%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../file-topics.html"><span>file</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306248890%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../file-topics.html">fileTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../-file-topic/index.html">FileTopic</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1865217213%2FProperties%2F1641132287" anchor-label="inTopics" id="1865217213%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../in-topics.html"><span>in</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1865217213%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../in-topics.html">inTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../-topic-in/index.html">TopicIn</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1848210533%2FProperties%2F1641132287" anchor-label="name" id="-1848210533%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1848210533%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1253828734%2FProperties%2F1641132287" anchor-label="outTopics" id="-1253828734%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../out-topics.html"><span>out</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1253828734%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../out-topics.html">outTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../-topic-out/index.html">TopicOut</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="17069658%2FFunctions%2F1641132287" anchor-label="toString" id="17069658%2FFunctions%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="17069658%2FFunctions%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns a human-readable string for the given <a href="../index.html">SOContext</a>, which contains the name of the context, as well as a list of all topics.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
