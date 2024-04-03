@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Data</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SharedDefinitions:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SharedDefinitions::com.swarovskioptik.comm.definition.topic/InstallationStatus.Data///PointingToDeclaration//1641132287">
+  <div class="breadcrumbs"><a href="../../../index.html">SharedDefinitions</a><span class="delimiter">/</span><a href="../../index.html">com.swarovskioptik.comm.definition.topic</a><span class="delimiter">/</span><a href="../index.html">InstallationStatus</a><span class="delimiter">/</span><span class="current">Data</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Data</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Data</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>task<span class="token operator">: </span><a href="-installation-task/index.html">InstallationStatus.Data.InstallationTask</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>step<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>state<span class="token operator">: </span><a href="-installation-state/index.html">InstallationStatus.Data.InstallationState</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>progress<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>task</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The type of task that is being performed / has been initiated, for which this <a href="../index.html">InstallationStatus</a> is emitted.</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>step</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The step within the given <a href="task.html">task</a> this <a href="../index.html">InstallationStatus</a> is about. Must be one of the constants defined in <a href="-install-step/index.html">InstallStep</a>:</p><ul><li><p class="paragraph"><a href="-install-step/-a-p-p-l-i-c-a-t-i-o-n_-f-i-l-e_-c-o-p-y.html">InstallStep.APPLICATION_FILE_COPY</a></p></li><li><p class="paragraph"><a href="-install-step/-a-p-p-l-i-c-a-t-i-o-n_-v-e-r-i-f-i-c-a-t-i-o-n.html">InstallStep.APPLICATION_VERIFICATION</a></p></li><li><p class="paragraph"><a href="-install-step/-a-p-p-l-i-c-a-t-i-o-n_-i-n-s-t-a-l-l-a-t-i-o-n.html">InstallStep.APPLICATION_INSTALLATION</a></p></li><li><p class="paragraph"><a href="-install-step/-a-p-p-l-i-c-a-t-i-o-n_-u-n-i-n-s-t-a-l-l.html">InstallStep.APPLICATION_UNINSTALL</a></p></li><li><p class="paragraph"><a href="-install-step/-o-s_-p-a-c-k-a-g-e_-c-o-p-y.html">InstallStep.OS_PACKAGE_COPY</a></p></li><li><p class="paragraph"><a href="-install-step/-o-s_-p-a-c-k-a-g-e_-d-e-c-o-m-p-r-e-s-s-i-o-n.html">InstallStep.OS_PACKAGE_DECOMPRESSION</a></p></li><li><p class="paragraph"><a href="-install-step/-o-s_-p-a-c-k-a-g-e_-c-o-n-f-i-g-u-r-a-t-i-o-n_-v-e-r-i-f-i-c-a-t-i-o-n.html">InstallStep.OS_PACKAGE_CONFIGURATION_VERIFICATION</a></p></li><li><p class="paragraph"><a href="-install-step/-o-s_-u-p-d-a-t-e_-i-n-s-t-a-l-l-a-t-i-o-n.html">InstallStep.OS_UPDATE_INSTALLATION</a></p></li><li><p class="paragraph"><a href="-install-step/-o-s_-u-p-d-a-t-e_-r-e-b-o-o-t.html">InstallStep.OS_UPDATE_REBOOT</a></p></li></ul></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>state</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The state this <a href="step.html">step</a> has been completed with / is currently in (one of <a href="-installation-state/-failed/index.html">InstallationState.Failed</a>, <a href="-installation-state/-in-progress/index.html">InstallationState.InProgress</a> or <a href="-installation-state/-success/index.html">InstallationState.Success</a>)</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>progress</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the progress <code class="lang-kotlin">[0, 100]</code> of the current installation step. Will in practice only contain a value if <a href="state.html">state</a> is <a href="-installation-state/-in-progress/index.html">InstallationState.InProgress</a>.</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>message</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A message this <a href="../index.html">InstallationStatus</a> might contain, is required if <a href="state.html">state</a> indicated an error (<a href="-installation-state/-failed/index.html">InstallationState.Failed</a>).</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1838259028%2FConstructors%2F1641132287" anchor-label="Data" id="-1838259028%2FConstructors%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-data.html"><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1838259028%2FConstructors%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">task<span class="token operator">: </span><a href="-installation-task/index.html">InstallationStatus.Data.InstallationTask</a><span class="token punctuation">, </span></span><span class="parameter ">step<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">state<span class="token operator">: </span><a href="-installation-state/index.html">InstallationStatus.Data.InstallationState</a><span class="token punctuation">, </span></span><span class="parameter ">progress<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="99682934%2FClasslikes%2F1641132287" anchor-label="InstallationState" id="99682934%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-installation-state/index.html"><span>Installation</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="99682934%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-installation-state/index.html">InstallationState</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-installation-state/index.html">InstallationStatus.Data.InstallationState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">The states any step may be in</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1939258838%2FClasslikes%2F1641132287" anchor-label="InstallationTask" id="1939258838%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-installation-task/index.html"><span>Installation</span><wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1939258838%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-installation-task/index.html">InstallationTask</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-installation-task/index.html">InstallationStatus.Data.InstallationTask</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">The task this InstallationStatus is about.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1766780698%2FClasslikes%2F1641132287" anchor-label="InstallStep" id="-1766780698%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-install-step/index.html"><span>Install</span><wbr><span><span>Step</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1766780698%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-install-step/index.html">InstallStep</a></div><div class="brief "><p class="paragraph">Defines the steps that may be set in <a href="step.html">InstallationStatus.Data.step</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-2058068141%2FProperties%2F1641132287" anchor-label="message" id="-2058068141%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="message.html"><span><span>message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058068141%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="message.html">message</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1980956653%2FProperties%2F1641132287" anchor-label="progress" id="-1980956653%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="progress.html"><span><span>progress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1980956653%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="progress.html">progress</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="17577289%2FProperties%2F1641132287" anchor-label="state" id="17577289%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state.html"><span><span>state</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="17577289%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="state.html">state</a><span class="token operator">: </span><a href="-installation-state/index.html">InstallationStatus.Data.InstallationState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1192576468%2FProperties%2F1641132287" anchor-label="step" id="1192576468%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="step.html"><span><span>step</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1192576468%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="step.html">step</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1441666757%2FProperties%2F1641132287" anchor-label="task" id="-1441666757%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="task.html"><span><span>task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1441666757%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="task.html">task</a><span class="token operator">: </span><a href="-installation-task/index.html">InstallationStatus.Data.InstallationTask</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

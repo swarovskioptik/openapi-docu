@@ -1,0 +1,442 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SOContext</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SharedDefinitions:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SharedDefinitions::com.swarovskioptik.comm.definition/SOContext///PointingToDeclaration//1641132287">
+  <div class="breadcrumbs"><a href="../../index.html">SharedDefinitions</a><span class="delimiter">/</span><a href="../index.html">com.swarovskioptik.comm.definition</a><span class="delimiter">/</span><span class="current">SOContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>SOContext</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">SOContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>connectionType<span class="token operator">: </span><a href="../-connection-type/index.html">ConnectionType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>inTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-in/index.html">TopicIn</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>outTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-out/index.html">TopicOut</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fileTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file-topic/index.html">FileTopic</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div><p class="paragraph">Defines a context to be used / released within the SDK.</p><p class="paragraph">There are predefined contexts (which are defined as static inner classes of this abstract class), which can be used:</p><ul><li><p class="paragraph"><a href="-system-context/index.html">SystemContext</a></p></li><li><p class="paragraph"><a href="-system-steering-context/index.html">SystemSteeringContext</a></p></li><li><p class="paragraph"><a href="-logging-context/index.html">LoggingContext</a></p></li><li><p class="paragraph"><a href="-display-context/index.html">DisplayContext</a></p></li><li><p class="paragraph"><a href="-brightness-controller-context/index.html">BrightnessControllerContext</a></p></li><li><p class="paragraph"><a href="-picture-preview-context/index.html">PicturePreviewContext</a></p></li><li><p class="paragraph"><a href="-picture-context/index.html">PictureContext</a></p></li><li><p class="paragraph"><a href="-video-preview-context/index.html">VideoPreviewContext</a></p></li><li><p class="paragraph"><a href="-video-context/index.html">VideoContext</a></p></li><li><p class="paragraph"><a href="-camera-settings-context/index.html">CameraSettingsContext</a></p></li><li><p class="paragraph"><a href="-deployment-context/index.html">DeploymentContext</a></p></li><li><p class="paragraph"><a href="-software-status-context/index.html">SoftwareStatusContext</a></p></li><li><p class="paragraph"><a href="-live-stream-context/index.html">LiveStreamContext</a></p></li><li><p class="paragraph"><a href="-open-a-p-i-context-b-l-e/index.html">OpenAPIContextBLE</a></p></li><li><p class="paragraph"><a href="-open-a-p-i-context/index.html">OpenAPIContext</a></p></li></ul><p class="paragraph">If you declare your own context (with a corresponding inside app to that), you need to create a context extending from this class, and then register the context in the SDK.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>name</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the name of the context. This should be a unique name across all contexts.</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>connection</span><wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The <a href="../-connection-type/index.html">ConnectionType</a> which is needed for this <a href="index.html">SOContext</a>. Context's should always prefer to use <a href="../-connection-type/-b-l-e/index.html">ConnectionType.BLE</a> if possible, and only use <a href="../-connection-type/-w-i-f-i/index.html">ConnectionType.WIFI</a> if a larger bandwidth is needed. This <a href="connection-type.html">connectionType</a> only specifies the <i>minimum needed </i><a href="../-connection-type/index.html"><i>ConnectionType</i></a>. This means, that if a context declares <a href="../-connection-type/-b-l-e/index.html">ConnectionType.BLE</a> here, but the SOComm device is currently connected using <a href="../-connection-type/-w-i-f-i/index.html">ConnectionType.WIFI</a> (or switched to WIFI during the use of this context), all data communication will be changed to use <a href="../-connection-type/-w-i-f-i/index.html">ConnectionType.WIFI</a> as long as any context needs <a href="../-connection-type/-w-i-f-i/index.html">ConnectionType.WIFI</a>.</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>in</span><wbr><span><span>Topics</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The <a href="../-topic-in/index.html">TopicIn</a>s this context allows the SDK user to send to the SOComm device (publish items to the SOComm device).</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>out</span><wbr><span><span>Topics</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The <a href="../-topic-out/index.html">TopicOut</a>s this context allows the SDK user to receive from the SOComm device (subscribe to the SOComm device).</p></div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>file</span><wbr><span><span>Topics</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The list of <a href="../-file-topic/index.html">FileTopic</a> this context allows the SDK user to use. May only be set to a non-empty list, if <a href="connection-type.html">connectionType</a> is <a href="../-connection-type/-w-i-f-i/index.html">WIFI</a>.</p></div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-system-context/index.html">SystemContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-system-steering-context/index.html">SystemSteeringContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-logging-context/index.html">LoggingContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-display-context/index.html">DisplayContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-brightness-controller-context/index.html">BrightnessControllerContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-picture-preview-context/index.html">PicturePreviewContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-picture-context/index.html">PictureContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-video-preview-context/index.html">VideoPreviewContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-video-context/index.html">VideoContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-camera-settings-context/index.html">CameraSettingsContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-open-a-p-i-context-b-l-e/index.html">OpenAPIContextBLE</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-open-a-p-i-context/index.html">OpenAPIContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-deployment-context/index.html">DeploymentContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-software-status-context/index.html">SoftwareStatusContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-live-stream-context/index.html">LiveStreamContext</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1927470367%2FConstructors%2F1641132287" anchor-label="SOContext" id="1927470367%2FConstructors%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-o-context.html"><span><span>SOContext</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1927470367%2FConstructors%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">connectionType<span class="token operator">: </span><a href="../-connection-type/index.html">ConnectionType</a><span class="token punctuation">, </span></span><span class="parameter ">inTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-in/index.html">TopicIn</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">outTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-out/index.html">TopicOut</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fileTopics<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file-topic/index.html">FileTopic</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1578968773%2FClasslikes%2F1641132287" anchor-label="BrightnessControllerContext" id="1578968773%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-brightness-controller-context/index.html"><span>Brightness</span><wbr><span>Controller</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1578968773%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-brightness-controller-context/index.html">BrightnessControllerContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for controlling the display brightness.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1235549920%2FClasslikes%2F1641132287" anchor-label="CameraSettingsContext" id="1235549920%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-camera-settings-context/index.html"><span>Camera</span><wbr><span>Settings</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1235549920%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-camera-settings-context/index.html">CameraSettingsContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for camera settings for all Inside Apps excluding the Open API Inside App.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2070211941%2FClasslikes%2F1641132287" anchor-label="Companion" id="-2070211941%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2070211941%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1356202557%2FClasslikes%2F1641132287" anchor-label="DeploymentContext" id="1356202557%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-deployment-context/index.html"><span>Deployment</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1356202557%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-deployment-context/index.html">DeploymentContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Deployment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="475305998%2FClasslikes%2F1641132287" anchor-label="DisplayContext" id="475305998%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-display-context/index.html"><span>Display</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="475305998%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-display-context/index.html">DisplayContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for controlling the display appearance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-57280764%2FClasslikes%2F1641132287" anchor-label="LiveStreamContext" id="-57280764%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-live-stream-context/index.html"><span>Live</span><wbr><span>Stream</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-57280764%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-live-stream-context/index.html">LiveStreamContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Live Video Streaming to external devices.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1222863189%2FClasslikes%2F1641132287" anchor-label="LoggingContext" id="-1222863189%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-logging-context/index.html"><span>Logging</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1222863189%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-logging-context/index.html">LoggingContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for reading and adjusting the log.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2130576060%2FClasslikes%2F1641132287" anchor-label="OpenAPIContext" id="2130576060%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-a-p-i-context/index.html"><span>Open</span><wbr><span><span>APIContext</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2130576060%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-open-a-p-i-context/index.html">OpenAPIContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Open API using Wifi.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1341038827%2FClasslikes%2F1641132287" anchor-label="OpenAPIContextBLE" id="1341038827%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-a-p-i-context-b-l-e/index.html"><span>Open</span><wbr><span>APIContext</span><wbr><span><span>BLE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1341038827%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-open-a-p-i-context-b-l-e/index.html">OpenAPIContextBLE</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Open API using BLE.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-155194294%2FClasslikes%2F1641132287" anchor-label="PictureContext" id="-155194294%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-picture-context/index.html"><span>Picture</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-155194294%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-picture-context/index.html">PictureContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for transferring pictures.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-472994462%2FClasslikes%2F1641132287" anchor-label="PicturePreviewContext" id="-472994462%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-picture-preview-context/index.html"><span>Picture</span><wbr><span>Preview</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-472994462%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-picture-preview-context/index.html">PicturePreviewContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for transferring picture previews.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1257074447%2FClasslikes%2F1641132287" anchor-label="SoftwareStatusContext" id="-1257074447%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-software-status-context/index.html"><span>Software</span><wbr><span>Status</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1257074447%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-software-status-context/index.html">SoftwareStatusContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Deployment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-387187545%2FClasslikes%2F1641132287" anchor-label="SystemContext" id="-387187545%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-system-context/index.html"><span>System</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-387187545%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-system-context/index.html">SystemContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for public System Information.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1578045496%2FClasslikes%2F1641132287" anchor-label="SystemSteeringContext" id="1578045496%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-system-steering-context/index.html"><span>System</span><wbr><span>Steering</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1578045496%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-system-steering-context/index.html">SystemSteeringContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for Steering App System Information.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1574446521%2FClasslikes%2F1641132287" anchor-label="VideoContext" id="-1574446521%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-video-context/index.html"><span>Video</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1574446521%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-video-context/index.html">VideoContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for transferring pictures.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="110852293%2FClasslikes%2F1641132287" anchor-label="VideoPreviewContext" id="110852293%2FClasslikes%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-video-preview-context/index.html"><span>Video</span><wbr><span>Preview</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="110852293%2FClasslikes%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-video-preview-context/index.html">VideoPreviewContext</a> : <a href="index.html">SOContext</a></div><div class="brief "><p class="paragraph">Context for transferring video previews.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="604018766%2FProperties%2F1641132287" anchor-label="connectionType" id="604018766%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connection-type.html"><span>connection</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="604018766%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="connection-type.html">connectionType</a><span class="token operator">: </span><a href="../-connection-type/index.html">ConnectionType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-306248890%2FProperties%2F1641132287" anchor-label="fileTopics" id="-306248890%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file-topics.html"><span>file</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306248890%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="file-topics.html">fileTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file-topic/index.html">FileTopic</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1865217213%2FProperties%2F1641132287" anchor-label="inTopics" id="1865217213%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="in-topics.html"><span>in</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1865217213%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="in-topics.html">inTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-in/index.html">TopicIn</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1848210533%2FProperties%2F1641132287" anchor-label="name" id="-1848210533%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1848210533%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1253828734%2FProperties%2F1641132287" anchor-label="outTopics" id="-1253828734%2FProperties%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="out-topics.html"><span>out</span><wbr><span><span>Topics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1253828734%2FProperties%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="out-topics.html">outTopics</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-topic-out/index.html">TopicOut</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="17069658%2FFunctions%2F1641132287" anchor-label="toString" id="17069658%2FFunctions%2F1641132287" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":SharedDefinitions:dokkaHtmlPartial/main" data-filterable-set=":SharedDefinitions:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="17069658%2FFunctions%2F1641132287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SharedDefinitions:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns a human-readable string for the given <a href="index.html">SOContext</a>, which contains the name of the context, as well as a list of all topics.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

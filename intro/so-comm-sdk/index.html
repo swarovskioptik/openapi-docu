@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/intro/so-comm-sdk/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>SO Comm SDK - Swarovski Optik OpenAPI Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SO Comm SDK";
+    var mkdocs_page_input_path = "intro/so-comm-sdk.md";
+    var mkdocs_page_url = "/openapi-docu/intro/so-comm-sdk/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Swarovski Optik OpenAPI Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introduction</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../ax-visio/">AX Visio</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">SO Comm SDK</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#socontext-concept">SOContext Concept</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inside-and-outside-api">Inside and Outside API</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#communication-endpoints">Communication Endpoints</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#so-comm-outside-api-library">SO Comm Outside API Library</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#operations">Operations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-concept-api-keys">Security Concept - API keys</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../openapi/">OpenAPI</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../kotlin-extensions/">Kotlin Extensions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../tutorial/how-to-add-the-so-comm-sdk/">How to add the SO Comm SDK</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">References</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/releases/">Releases of the SO Comm SDK</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/api-reference/">API Reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/example-applications/">Example Applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Swarovski Optik OpenAPI Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Introduction &raquo;</li>
+        
+      
+    
+    <li>SO Comm SDK</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="so-comm-sdk">SO Comm SDK</h1>
+<p>The SO Comm SDK is a set of APIs, which are grouped into SO Comm Inside API for
+device development and SO Comm Outside API mainly for smartphone/tablet
+development. These SDKs allow to reuse WiFi and BLE communication routines for
+multiple products. By separating the behavior and communication routines from
+data definitions, into different artifacts we also aim to have stable behavior,
+but of course flexible data definitions for the different product needs.</p>
+<p>For the OpenAPI only the SO Comm Outside API is relevant.</p>
+<h2 id="socontext-concept">SOContext Concept</h2>
+<p>Swarovski Optik devices are able to run in different device modes (Inside
+Apps). For example, the AX Visio can run the Photo/Video or Bird ID App.
+Depending on the Inside App (and also depending on the state of the Inside App)
+different communication needs might be present.</p>
+<p>On the other hand, Swarovski Optik devices support multiple Outside Apps
+(running on a smartphone or tablet for example). These Outside Apps also have
+different communication needs. For example, the Merlin App is only interested
+in receiving photos and being able to configure settings for the Bird-ID Inside
+App, but it is not interested in receiving a live stream from the SO device or
+video recordings.</p>
+<p>Each of the communication features mentioned above (e.g. receiving photos),
+includes various communication endpoints. Moreover, different communication
+technologies (in our case WiFi, Bluetooth Low Energy (BLE)), communication
+protocols (BLE GATT, Wifi MQTT, RTP) and access control requirements are
+present.</p>
+<p>Therefore, the SO Comm SDK introduces a new layer for handling communication
+endpoints: <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/">SOContexts</a></p>
+<p>A SOContext contains a set of communication endpoints that are from a usage
+point of view related to each other, have similar needs for communication
+bandwidth and access control requirements. On Swarovski Optik devices
+SOContexts can be provided by applications or system services, which might be
+used by several applications. On smartphones apps can use a SOContext, when it
+is provided by a Swarovski Optik device and the app has access to it.</p>
+<p><img alt="SO Comm SDK Context Overview" src="../../img/so-comm-sdk-context-overview.png" /></p>
+<p>Access is controlled using an API Key. See below for futher details.</p>
+<h2 id="inside-and-outside-api">Inside and Outside API</h2>
+<p>To support the developers of Inside and Outside Apps two APIs have been
+developed: The <em>SO Comm Inside API</em> the <em>SO Comm Outside API</em>. For the
+Swarovski Optics OpenAPI only the later is relevant.</p>
+<p>An Outside App registers to use one or multiple SOContexts via the
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/">SoCommOutsideAPI object</a>
+Moreover, the SOContext defines whether BLE only is sufficient or also WiFi
+will be used for transmitting data.</p>
+<p>BLE is used as initial communication technology for connection establishment
+and checking SOContext availability and is always available on the Device. If
+one SOContext, which requires WiFi as communication technology (for bandwidth
+reasons), is in use (i.e., an Inside App configured it as supported and an
+Outside App registered to it), all communication with this Outside App will be
+carried out using WiFi. Nevertheless, the BLE connection will be kept alive on
+the Device to enable smooth transitions if WiFi is switched off for any reason.
+Additional clients may connect via WiFi if the corresponding SOContexts are in
+use by the first client and the client shared the WiFi credentials out-of-band
+(e.g. via a QR code).</p>
+<h2 id="communication-endpoints">Communication Endpoints</h2>
+<p>The following communication endpoints are supported by the SO Communication Inside API and Outside API at the moment:</p>
+<ul>
+<li>Topics (very similar to MQTT topics)
+  A topic has a unique path which contains its name. A topic is either an "in" topic or an "out" topic. An "in" topic is a topic which will be subscribed by Inside Apps and can be used by Outside Apps to transmit information (publish) to Inside Apps. An "out" topic is a topic which will be subscribed by Outside Apps and can be used by Inside Apps to transmit information (publish) to Outside Apps.</li>
+<li>Topics are used only for small messages (i.e. &lt; 100 kByte)</li>
+<li>FileTopics A normal Topic is used to transfer information, where a file can be downloaded using SCP. Also this data exchange can happen in both directions. From Inside to Outside App (e.g. pictures, videos) and from Outside to Insdie App (e.g. OTA update package).</li>
+<li>RTSP An Outside App can receive an RTSP server URL and connect to it for rendering the live video stream for example.</li>
+</ul>
+<h2 id="so-comm-outside-api-library">SO Comm Outside API Library</h2>
+<p>The SO Communication Outside API encapsulates the complexity of handling
+connections across multiple communication technologies - Bluetooth Low Energy
+and WiFi. Outside App development can rely on the SO Communication Outside API
+without considering protocol details, i.e., an abstract interface is provided.</p>
+<p>An Outside App uses the SO Communication Outside API to configure its needed
+SOContexts (use) and it is informed by the API if the current available
+SOContexts have changed.</p>
+<h3 id="operations">Operations</h3>
+<p>To connect and disconnect to a AX Visio device, the methods are exposed:</p>
+<ul>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connect.html">fun connect(deviceName: String): Completable</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/disconnect.html">fun disconnect(): Completable</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connection-state.html">val connectionState: Observable&lt;SOCommOutsideAPI.ConnectionState&gt;</a></li>
+</ul>
+<p>To use, unuse and see the available SOContexts, the following methods and variables exists</p>
+<ul>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/available-contexts.html">val availableContexts: Observable&lt;Set&lt;SOContext&gt;&gt;</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/contexts-in-use.html">val contextsInUse: Observable&lt;Set&lt;SOContext&gt;&gt;</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/use.html">fun use(context: SOContext): Completable</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/release.html">fun release(context: SOContext): Completable</a></li>
+</ul>
+<p>After using a context, you can publish and subscribe to the topics in the SOContext:</p>
+<ul>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/subscribe-topic.html">fun &lt;T&gt; subscribeTopic(topic: TopicOut&lt;T&gt;): Observable&lt;T&gt;</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/publish-topic.html">fun &lt;T&gt; publishTopic(topic: TopicIn&lt;T&gt;, value: T): Completable</a></li>
+</ul>
+<p>To retrieve and send files the SO Comm Outside API provides the follwing
+methods and objects, but before using these directly consider using the
+<a href="../../reference/MediaClient/">MediaClient</a> library.</p>
+<ul>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-file-api/">SOCommFileApi</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-file-api/send-file.html">fun sendFile(topic: FileTopic, file: File): Flowable&lt;Int&gt;</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-file-api/send-file.html">fun sendFile(topic: FileTopic, uri: Uri): Flowable&lt;Int&gt;</a></li>
+<li><a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-file-api/subscribe-to-files.html">fun subscribeToFiles(topic: FileTopic): Flowable&lt;SOCommFileApi.ReceivedFile&gt;</a></li>
+</ul>
+<h2 id="security-concept-api-keys">Security Concept - API keys</h2>
+<p>The authentication of SOContext usage is based on API Keys.
+These are unencrypted <a href="https://jwt.io/introduction/">JSON Web Token (JWT)</a>,
+given out by Swarovski Optik to application developers.</p>
+<p>An API key is tied to a specific set of SOContexts. For the OpenAPI usages the API key will
+grant accees to the OpenAPI and the other relevant contexts.
+See <a href="../intro/openapi/#available-contexts">OpenAPI &gt; Available Contexts</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../openapi/" class="btn btn-neutral float-right" title="OpenAPI">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ax-visio/" class="btn btn-neutral" title="AX Visio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ax-visio/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../openapi/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SOCommDeviceCommunication</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SDK:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SDK::com.swarovskioptik.comm/SOCommDeviceCommunication///PointingToDeclaration//1607690379">
+  <div class="breadcrumbs"><a href="../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">com.swarovskioptik.comm</a><span class="delimiter">/</span><span class="current">SOCommDeviceCommunication</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>SOComm</span><wbr><span>Device</span><wbr><span><span>Communication</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SOCommDeviceCommunication</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../-base-s-o-comm-outside-a-p-i/index.html">BaseSOCommOutsideAPI</a><span class="token punctuation">, </span></span><span class="parameter ">pictureDownloadBatchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">videoDownloadBatchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span> : <a href="../../../MediaClient/com.swarovskioptik.comm.media/-device-communication/index.html">DeviceCommunication</a></div><p class="paragraph">The implementation of the <a href="../../../MediaClient/com.swarovskioptik.comm.media/-device-communication/index.html">DeviceCommunication</a> interface to use the <a href="../../../MediaClient/com.swarovskioptik.comm.media/-s-o-comm-media-client/index.html">SOCommMediaClient</a> with an SOComm device.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>api</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The instance of an <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> to use for the media-client connection</p></div></div></div></div><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>picture</span><wbr><span>Download</span><wbr><span>Batch</span><wbr><span><span>Size</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The number of pictures to request in one batch when downloading full resolution pictures. Defaults to 20. Only change this when you are aware of the consequences of a too large batch size.</p></div></div></div></div><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>video</span><wbr><span>Download</span><wbr><span>Batch</span><wbr><span><span>Size</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The number of videos to request in one batch when downloading full resolution videos. Defaults to 1. Only change this when you are aware of the consequences of a too large batch size.</p></div></div></div></div></div><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../MediaClient/com.swarovskioptik.comm.media/-device-communication/index.html"><span>Device</span><wbr><span><span>Communication</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../MediaClient/com.swarovskioptik.comm.media/-s-o-comm-media-client/index.html"><span>SOComm</span><wbr><span>Media</span><wbr><span><span>Client</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../MediaClient/com.swarovskioptik.comm.media/-s-o-comm-media-client-builder/index.html"><span>SOComm</span><wbr><span>Media</span><wbr><span>Client</span><wbr><span><span>Builder</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-439629265%2FConstructors%2F1607690379" anchor-label="SOCommDeviceCommunication" id="-439629265%2FConstructors%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-o-comm-device-communication.html"><span>SOComm</span><wbr><span>Device</span><wbr><span><span>Communication</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-439629265%2FConstructors%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../-base-s-o-comm-outside-a-p-i/index.html">BaseSOCommOutsideAPI</a><span class="token punctuation">, </span></span><span class="parameter ">pictureDownloadBatchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">videoDownloadBatchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-719364827%2FFunctions%2F1607690379" anchor-label="availableItemsObservable" id="-719364827%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="available-items-observable.html"><span>available</span><wbr><span>Items</span><wbr><span><span>Observable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-719364827%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="available-items-observable.html"><span class="token function">availableItemsObservable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="533883261%2FFunctions%2F1607690379" anchor-label="fullResolutionItemReceivedObservable" id="533883261%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="full-resolution-item-received-observable.html"><span>full</span><wbr><span>Resolution</span><wbr><span>Item</span><wbr><span>Received</span><wbr><span><span>Observable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="533883261%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="full-resolution-item-received-observable.html"><span class="token function">fullResolutionItemReceivedObservable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Flowable///PointingToDeclaration/">Flowable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-device-communication/-downloaded-file/index.html">DeviceCommunication.DownloadedFile</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2016184305%2FFunctions%2F1607690379" anchor-label="isInStateToDownloadFullResolutionImages" id="2016184305%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-in-state-to-download-full-resolution-images.html"><span>is</span><wbr><span>In</span><wbr><span>State</span><wbr><span>To</span><wbr><span>Download</span><wbr><span>Full</span><wbr><span>Resolution</span><wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2016184305%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-in-state-to-download-full-resolution-images.html"><span class="token function">isInStateToDownloadFullResolutionImages</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1222087941%2FFunctions%2F1607690379" anchor-label="isInStateToDownloadThumbnails" id="1222087941%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-in-state-to-download-thumbnails.html"><span>is</span><wbr><span>In</span><wbr><span>State</span><wbr><span>To</span><wbr><span>Download</span><wbr><span><span>Thumbnails</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1222087941%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-in-state-to-download-thumbnails.html"><span class="token function">isInStateToDownloadThumbnails</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="33303690%2FFunctions%2F1607690379" anchor-label="publishFileReceived" id="33303690%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="publish-file-received.html"><span>publish</span><wbr><span>File</span><wbr><span><span>Received</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="33303690%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="publish-file-received.html"><span class="token function">publishFileReceived</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-268972611%2FFunctions%2F1607690379" anchor-label="setItemsReceivedButNotAcknowledgedProvider" id="-268972611%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-items-received-but-not-acknowledged-provider.html"><span>set</span><wbr><span>Items</span><wbr><span>Received</span><wbr><span>But</span><wbr><span>Not</span><wbr><span>Acknowledged</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268972611%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-items-received-but-not-acknowledged-provider.html"><span class="token function">setItemsReceivedButNotAcknowledgedProvider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">single<span class="token operator">: </span><span data-unresolved-link="io.reactivex/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-288026029%2FFunctions%2F1607690379" anchor-label="setLocalMediaItemsProvider" id="-288026029%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-local-media-items-provider.html"><span>set</span><wbr><span>Local</span><wbr><span>Media</span><wbr><span>Items</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-288026029%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-local-media-items-provider.html"><span class="token function">setLocalMediaItemsProvider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a><span class="token punctuation">, </span></span><span class="parameter ">single<span class="token operator">: </span><span data-unresolved-link="io.reactivex/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../MediaClient/com.swarovskioptik.comm.media.model/-media-item/-local/index.html">MediaItem.Local</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1046822462%2FFunctions%2F1607690379" anchor-label="startObservingForFullResolutionImages" id="1046822462%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-observing-for-full-resolution-images.html"><span>start</span><wbr><span>Observing</span><wbr><span>For</span><wbr><span>Full</span><wbr><span>Resolution</span><wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1046822462%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="start-observing-for-full-resolution-images.html"><span class="token function">startObservingForFullResolutionImages</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1407551548%2FFunctions%2F1607690379" anchor-label="startObservingForThumbnails" id="1407551548%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-observing-for-thumbnails.html"><span>start</span><wbr><span>Observing</span><wbr><span>For</span><wbr><span><span>Thumbnails</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1407551548%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="start-observing-for-thumbnails.html"><span class="token function">startObservingForThumbnails</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shouldThumbnailBeFetched<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="io.reactivex/Single///PointingToDeclaration/">Single</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">maxNumberOfThumbnailsToFetch<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-209256720%2FFunctions%2F1607690379" anchor-label="stopObservingForFullResolutionImages" id="-209256720%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-observing-for-full-resolution-images.html"><span>stop</span><wbr><span>Observing</span><wbr><span>For</span><wbr><span>Full</span><wbr><span>Resolution</span><wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209256720%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="stop-observing-for-full-resolution-images.html"><span class="token function">stopObservingForFullResolutionImages</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1804865852%2FFunctions%2F1607690379" anchor-label="stopObservingForThumbnails" id="-1804865852%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-observing-for-thumbnails.html"><span>stop</span><wbr><span>Observing</span><wbr><span>For</span><wbr><span><span>Thumbnails</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1804865852%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="stop-observing-for-thumbnails.html"><span class="token function">stopObservingForThumbnails</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2032759881%2FFunctions%2F1607690379" anchor-label="thumbnailReceivedObservable" id="2032759881%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="thumbnail-received-observable.html"><span>thumbnail</span><wbr><span>Received</span><wbr><span><span>Observable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2032759881%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="thumbnail-received-observable.html"><span class="token function">thumbnailReceivedObservable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mediaType<span class="token operator">: </span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-media-type/index.html">MediaType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../MediaClient/com.swarovskioptik.comm.media/-device-communication/-new-item-added/index.html">DeviceCommunication.NewItemAdded</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

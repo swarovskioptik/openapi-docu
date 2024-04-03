@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/intro/openapi/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>OpenAPI - Swarovski Optik OpenAPI Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "OpenAPI";
+    var mkdocs_page_input_path = "intro/openapi.md";
+    var mkdocs_page_url = "/openapi-docu/intro/openapi/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Swarovski Optik OpenAPI Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introduction</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../ax-visio/">AX Visio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../so-comm-sdk/">SO Comm SDK</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">OpenAPI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#available-contexts">Available Contexts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#openapi-inside-app-selected">OpenAPI Inside App selected</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changes-of-the-selection-wheel">Changes of the selection wheel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keylistener">KeyListener</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keyactionprocedure">KeyActionProcedure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rendertext-and-renderpixelgraphic">RenderText and RenderPixelGraphic</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rendertext">RenderText</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#renderpixelgraphic">RenderPixelGraphic</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mediaclient">MediaClient</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#livestreamcontext">LiveStreamContext</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../kotlin-extensions/">Kotlin Extensions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../tutorial/how-to-add-the-so-comm-sdk/">How to add the SO Comm SDK</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">References</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/releases/">Releases of the SO Comm SDK</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/api-reference/">API Reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/example-applications/">Example Applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Swarovski Optik OpenAPI Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Introduction &raquo;</li>
+        
+      
+    
+    <li>OpenAPI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="openapi">OpenAPI</h1>
+<p>The OpenAPI is provided by the OpenAPI Inside App. A user has to select the
+OpenAPI App on the selection wheel. Otherwise the contexts are not
+available and the outside app cannot uses the contexts. If the app is selected
+on the selection wheel, but the contexts are not available, the user may has to
+press the power button. The contexts are only provided when the screen is
+turned on.</p>
+<h2 id="available-contexts">Available Contexts</h2>
+<p>When the OpenAPI Inside App is selected on the selection wheel the following
+contexts are available and can be used with the API key:</p>
+<ul>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-open-a-p-i-context/">OpenAPIContext       </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-open-a-p-i-context-b-l-e/">OpenAPIContextBLE    </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-system-context/">SystemContext        </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-picture-preview-context/">PicturePreviewContext</a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-picture-context/">PictureContext       </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-video-preview-context/">VideoPreviewContext  </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-video-context/">VideoContext         </a></li>
+<li><a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-live-stream-context/">LiveStreamContext    </a></li>
+</ul>
+<h2 id="openapi-inside-app-selected">OpenAPI Inside App selected</h2>
+<p>When no client is connected to the OpenAPI Inside App, the app shows the text
+<em>Please Connect</em> on the AX Visio.</p>
+<p>If your app has successfully used to the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-open-a-p-i-context/">OpenAPIContext</a>
+or the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-open-a-p-i-context-b-l-e/">OpenAPIContextBLE</a>
+the screen is not turned off automatically anymore. The screen and device stays
+awake as long as your app uses these contexts.</p>
+<p>You should either use the OpenAPIConext or the OpenAPIContextBLE. Using both
+contexts at the same time, is an error and shows a warning in the InsideApp UI.</p>
+<h2 id="changes-of-the-selection-wheel">Changes of the selection wheel</h2>
+<p>Your app must observe the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/available-contexts.html">availableContexts</a>.
+The OpenAPI context may be withdrawn at any time. E.g. in the following cases</p>
+<ul>
+<li>The user selects a different App on the selection wheel</li>
+<li>The user presses the power button and the screen turns off</li>
+<li>The InsideApp crashes</li>
+</ul>
+<p>In these cases the Outside App should notify the user and wait for the OpenAPI
+contexts. If they become available again, it can reuse the context.</p>
+<p>If the Outside App unuses the OpenAPI context or the OpenAPI Inside App
+withdraws the contexts, the OpenAPI Inside App resets all internal state. E.g.
+the Outside App must reregister all
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-register-key-listener/">KeyListeners</a>
+or
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-configure-key-action-procedure/">KeyACtionProcedures</a>,
+when it uses the OpenAPI context again.</p>
+<h2 id="keylistener">KeyListener</h2>
+<p>The AX Visio has three different keys or buttons: The power button, the scroll button and the release button.
+See <a href="../ax-visio/#buttons">AX Visio &gt; Buttons</a> for details.</p>
+<p>In the OpenAPI these three different keys and two states are represented as the string constants:</p>
+<ul>
+<li><code>OK_KEY_HALF</code></li>
+<li><code>OK_KEY_FULL</code></li>
+<li><code>POWER_KEY</code></li>
+<li><code>SCROLL_KEY</code></li>
+</ul>
+<p>The OpenAPI allows to register a <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-register-key-listener/">KeyListeners</a>
+to detect the key press and key release event. This works on all keys and
+states, except the power key. The power key is documented in the OpenAPI, but
+it's exclusively used by the device to turn on or off the screen and to power
+off the device.</p>
+<p>A KeyListener is specific to a single key. If you want to listen on more keys
+you have to register multiple listeners.</p>
+<p>There is no usage counter on the KeyListeners. If the outside app registers a
+listener for a single key two or more times, a single unregister call is
+sufficient to unregister the listener.</p>
+<h2 id="keyactionprocedure">KeyActionProcedure</h2>
+<p>The Outside App can configure different
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-configure-key-action-procedure/">KeyActionProcedure</a>.
+These are predefined actions for the keys on the AX Visio. E.g. to take a picture or to start and stop a video recording.
+All available actions are documented here:
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-configure-key-action-procedure/-params/">ConfigureKeyActionProcedure.Params</a></p>
+<p>A KeyActionProcedure consists of the actual procedure, the key and the action. The action is the direction of the key press, either down or up.</p>
+<p>For a given (key, action) combination only a single procedure can be configured. If you configure another procedure for the same (key, action) combination it replaces the previous one.</p>
+<p>To deconfigure a procedure, use the empty string as the procedure name.</p>
+<h2 id="rendertext-and-renderpixelgraphic">RenderText and RenderPixelGraphic</h2>
+<p>The OpenAPI allows the Outside Apps to display text and PNG on the AX Visio.</p>
+<h3 id="rendertext">RenderText</h3>
+<p>The outside app can draw one lined text strings on the AX Visio with the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-render-text/">RenderText</a>
+topic.  The position on the screen is specified in a normal x,y coordinate
+system. To calculate the middle of the screen or the bottom half of the screen,
+you have to first query the screen resolution using the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-get-display-resolution/">GetDisplayResolution</a>
+topic.</p>
+<p>The outside app can draw up to five different text strings at the same time on
+the AX Visio. If the outside app sends more than five text strings to the AX
+Visio, the oldest text is removed. It's a first-in-first-out queue.</p>
+<h3 id="renderpixelgraphic">RenderPixelGraphic</h3>
+<p>The Outside App can also draw arbitrary graphics on the AX Visio using the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-render-pixel-graphic/">RenderPixelGraphic</a>
+topic. There are two graphics slot in the AX Visio. One slot
+for a rotated image and one slot for a non-rotated image.</p>
+<p>If the Outside App sends a new graphic before the duration of the old graphic
+is elapsed, the new graphic replaces the old one.</p>
+<p>The Outside App's image is not scaled. It's drawn at the same size on the
+AX Visio. The current drawable resolution of the AX Visio display is 1366x768.
+Furthermore the image is drawn at the center of the AX Visio screen, which is the
+important visual view area for a user. So the image does not have to be the
+same resolution as the AX Visio screen. It can be smaller and only cover the area
+that the Outside App wants to draw in the center of the view. The border of the
+screen is hard to see and recognizable by the user.</p>
+<p>The image can be grayscale. It should mostly only use white and transparency.
+Black is not visible on the display. RGB images work technically, too, but are
+shown as grayscale on the monochrome AX Visio display.</p>
+<h2 id="mediaclient">MediaClient</h2>
+<p>Try to avoid using the PictureTopics or the VideoTopics directly. It's
+recommend to use the <a href="../../reference/MediaClient/">MediaClient</a>
+library.</p>
+<p>It will handle the download of pictures and vidoes for you. It also writes the files to a shared storage, so multiple different apps can use them.</p>
+<h2 id="livestreamcontext">LiveStreamContext</h2>
+<p>The AX Visio can provide a RTSP video stream which can be received by the Outside App, e.g. with the Android MediaPlayer.</p>
+<p>The Outside App can activate the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/-live-stream-context/">LiveStreamContext</a>
+with the OpenAPI
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-start-live-video-streaming/">StartLiveVideoStreaming</a> topic
+and stop it with
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-stop-live-video-streaming/">StopLiveVideoStreaming</a> topic.</p>
+<p>When the Outside App starts to use the LiveStreamContext, the Video stream and
+RSTP server is started on the AX Visio. After using the context, the Outside
+app can subscribe to the
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-live-stream-status/">LiveStreamStatus</a>
+to receive the details about the video stream.</p>
+<p>While handling this topic, the Outside App should take care of the following points:</p>
+<ul>
+<li>Check for the URL value <code>RTSP URL NOT AVAILABLE</code> or non-valid RTSP URLs. The
+  AX Visio sends it when there is no RTSP server running anymore.</li>
+<li>This topic is also send when a client connects and disconnect. See field
+  <code>activeClients</code>. It changes regularly. So if the Outside App restarts the
+  stream on every topic change, it creates  a endless feedback loop, because
+  the field <code>activeClients</code> changes when the client itself connects and
+  disconnects.</li>
+</ul>
+<p>If you want to change the resolution of the RTSP video stream, you can use the topic
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition.topic/-set-live-stream-settings/">SetLiveStreamSettings</a>.
+The currently only available resolutions are</p>
+<ul>
+<li><code>640x480</code></li>
+<li><code>1280x720</code></li>
+<li><code>1920x1080</code></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kotlin-extensions/" class="btn btn-neutral float-right" title="Kotlin Extensions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../so-comm-sdk/" class="btn btn-neutral" title="SO Comm SDK"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../so-comm-sdk/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../kotlin-extensions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

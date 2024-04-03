@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SOCommOutsideWifiOnlyAPI</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            falke-sdk-android
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":SDK:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="SDK::com.swarovskioptik.comm/SOCommOutsideWifiOnlyAPI///PointingToDeclaration//1607690379">
+  <div class="breadcrumbs"><a href="../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">com.swarovskioptik.comm</a><span class="delimiter">/</span><span class="current">SOCommOutsideWifiOnlyAPI</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>SOComm</span><wbr><span>Outside</span><wbr><span>Wifi</span><wbr><span>Only</span><wbr><span><span>API</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">SOCommOutsideWifiOnlyAPI</a> : <a href="../-base-s-o-comm-outside-a-p-i/index.html">BaseSOCommOutsideAPI</a></div><p class="paragraph">The SDK interface to connect &amp; communicate with a remote device over wifi-connection only.</p><p class="paragraph">Please note, that this API is used for special use-cases only. Refer to <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> for default usage.</p><p class="paragraph">Use the <a href="../-s-o-comm-outside-a-p-i-builder/index.html">SOCommOutsideAPIBuilder</a> class to create instances of the SDK:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">SOCommOutsideAPIBuilder(androidContext())<br>   .apiKey("YOUR-API-KEY")   //theoretically optional, however, you won't be able to do much on the remote device without a valid API KEY.<br>   .debugLogs { message -&gt; Log.d("SOComm", message) } //optional, should only be enabled in debug builds, and might just flood your logcat.<br>   .warningLogs { message -&gt; Log.w("SOComm", message) } //optional, will log only warnings, you need to decide whether you want to log warnings to somewhere (even in your production code)<br>   .errorLogs { message -&gt; Log.e("SOComm", message) } //optional, will log only errors, you need to decide whether you want to log errors to somewhere (even in your production code)<br>   .buildWifiOnly()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Keep in mind that the API needs some permissions to be granted, and the <a href="connect.html">connect</a> method will fail if those permissions are not granted. See the JavaDoc of <a href="connect.html">connect</a> for more details.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1388142239%2FProperties%2F1607690379" anchor-label="availableContexts" id="-1388142239%2FProperties%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="available-contexts.html"><span>available</span><wbr><span><span>Contexts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1388142239%2FProperties%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="available-contexts.html">availableContexts</a><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an <span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span> which emits live-updates to the available context's at the currently connected remote device.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1749377691%2FProperties%2F1607690379" anchor-label="connectionState" id="1749377691%2FProperties%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connection-state.html"><span>connection</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749377691%2FProperties%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="connection-state.html">connectionState</a><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-s-o-comm-outside-a-p-i/-connection-state/index.html">SOCommOutsideAPI.ConnectionState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An <span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span> which emits the current connection state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="70700464%2FProperties%2F1607690379" anchor-label="contextsInUse" id="70700464%2FProperties%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contexts-in-use.html"><span>contexts</span><wbr><span>In</span><wbr><span><span>Use</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="70700464%2FProperties%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contexts-in-use.html">contextsInUse</a><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an <span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span> which emits live-updates to the contexts which are currently in use (which is modified by calling <a href="use.html">use</a> / <a href="release.html">release</a>, or by contexts disappearing from the remote device (check <a href="available-contexts.html">availableContexts</a> on that for further information)).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-101503152%2FProperties%2F1607690379" anchor-label="fileApi" id="-101503152%2FProperties%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file-api.html"><span>file</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-101503152%2FProperties%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="file-api.html">fileApi</a><span class="token operator">: </span><a href="../-s-o-comm-file-api/index.html">SOCommFileApi</a></div><div class="brief "><p class="paragraph">Returns an instance of the <a href="../-s-o-comm-file-api/index.html">SOCommFileApi</a> which is associated with this <a href="../-base-s-o-comm-outside-a-p-i/index.html">BaseSOCommOutsideAPI</a>, and should be used to transmit larger payloads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-576846557%2FFunctions%2F1607690379" anchor-label="connect" id="-576846557%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connect.html"><span><span>connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-576846557%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="connect.html"><span class="token function">connect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">wifiSSID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">wifiPassword<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Connect to a remote device identified by the given <a href="connect.html">wifiSSID</a>. Please note, that this is currently only to be used in special use-cases, please refer to the <a href="../-s-o-comm-outside-a-p-i/index.html">SOCommOutsideAPI</a> for default usage.</p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="connect.html"><span class="token function"><strike>connect</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">wifiSSID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">wifiPassword<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">brokerHost<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">For documentation, please refer to the description in <a href="connect.html">connect</a>, which should be favoured over this method.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1954043952%2FFunctions%2F1607690379" anchor-label="disconnect" id="1954043952%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disconnect.html"><span><span>disconnect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1954043952%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Disconnects from a remote device (or cancels the connection attempt started using <a href="connect.html">connect</a>, if the SDK is still trying to connect to a remote device.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="103511044%2FFunctions%2F1607690379" anchor-label="getClientIdentifier" id="103511044%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-client-identifier.html"><span>get</span><wbr><span>Client</span><wbr><span><span>Identifier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="103511044%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-client-identifier.html"><span class="token function">getClientIdentifier</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Maybe///PointingToDeclaration/">Maybe</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-client-identifier/index.html">ClientIdentifier</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves the identifier of this device with which this smartphone / application is known at the remote device.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-694657797%2FFunctions%2F1607690379" anchor-label="getWifiCredentials" id="-694657797%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-wifi-credentials.html"><span>get</span><wbr><span>Wifi</span><wbr><span><span>Credentials</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-694657797%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-wifi-credentials.html"><span class="token function">getWifiCredentials</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Maybe///PointingToDeclaration/">Maybe</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-wifi-credentials/index.html">WifiCredentials</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns the wifi credentials of the current wifi connection, if currently connected via wifi. Will otherwise return <span data-unresolved-link="io.reactivex/Maybe/empty/#/PointingToDeclaration/">Maybe.empty</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1471066587%2FFunctions%2F1607690379" anchor-label="publishTopic" id="1471066587%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="publish-topic.html"><span>publish</span><wbr><span><span>Topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1471066587%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="publish-topic.html">T</a><span class="token operator">&gt; </span><a href="publish-topic.html"><span class="token function">publishTopic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topic<span class="token operator">: </span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-topic-in/index.html">TopicIn</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="publish-topic.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="publish-topic.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Publishes a payload to the given <a href="publish-topic.html">topic</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-457300640%2FFunctions%2F1607690379" anchor-label="registerDynamicContext" id="-457300640%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-dynamic-context.html"><span>register</span><wbr><span>Dynamic</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-457300640%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="register-dynamic-context.html"><span class="token function">registerDynamicContext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dynamicContext<span class="token operator">: </span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Registers a new <a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a> to the API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="635199118%2FFunctions%2F1607690379" anchor-label="release" id="635199118%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="release.html"><span><span>release</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="635199118%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="release.html"><span class="token function">release</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Releases a given <a href="release.html">context</a>, if it has been in use by calling <a href="use.html">use</a> anytime prior. This will cancel subscriptions to the topics within this context, which means that any Observables returned by <a href="subscribe-topic.html">subscribeTopic</a> that are not present in any other currently used <a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a> will not emit any items anymore and will be disposed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1375972500%2FFunctions%2F1607690379" anchor-label="subscribeTopic" id="-1375972500%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subscribe-topic.html"><span>subscribe</span><wbr><span><span>Topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1375972500%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="subscribe-topic.html">T</a><span class="token operator">&gt; </span><a href="subscribe-topic.html"><span class="token function">subscribeTopic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topic<span class="token operator">: </span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-topic-out/index.html">TopicOut</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="subscribe-topic.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Observable///PointingToDeclaration/">Observable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="subscribe-topic.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Subscribes to a given <a href="subscribe-topic.html">topic</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-910130802%2FFunctions%2F1607690379" anchor-label="use" id="-910130802%2FFunctions%2F1607690379" data-filterable-set=":SDK:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":SDK:dokkaHtmlPartial/release" data-filterable-set=":SDK:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use.html"><span><span>use</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-910130802%2FFunctions%2F1607690379"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":SDK:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="io.reactivex.annotations/CheckReturnValue///PointingToDeclaration/"><span class="token annotation builtin">CheckReturnValue</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="use.html"><span class="token function">use</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../../SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html">SOContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="io.reactivex/Completable///PointingToDeclaration/">Completable</span></div><div class="brief "><p class="paragraph">Registers to use a given <a href="use.html">context</a> and completes once the context has been used successfully.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
