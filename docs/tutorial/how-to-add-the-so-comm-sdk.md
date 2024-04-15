@@ -4,6 +4,8 @@ This tutorial will walk you trough the necessary steps to add the *SO Comm SDK*
 to your Android Application.  As an alternative you can also look at one of the
 [example applications](../ref/example-applications.md).
 
+## Include the Library
+
 ## Warning
 
 **Warning**: This content is not yet updated. The explanations and code examples do not yet reflect
@@ -12,7 +14,8 @@ the recommend and working way to add the *SO Comm SDK* to your application.
 A working example and the currently recommend reference can be found in the
 [example applications](../ref/example-applications.md).
 
-## Include the Library - for Groovy DSL
+
+### Groovy DSL
 
 If you want to include the SDK using the gradle, you need to configure a new
 repository to fetch the SDK from.  This can best be done in your root projects
@@ -32,11 +35,39 @@ After the repository has been added, you can add the dependency like any other g
 dependency in your module/app level `build.gradle` file:
 
 ```groovy
-implementation "com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]"
+dependencies {
+    implementation "com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]"
+    [...]
+}
 ```
 
 Replace the term `[CURRENT_LIBRARY_VERSION]` with the current library version.
 See for [Releases of the SO Comm SDK](../ref/releases.md) for details.
+
+
+### Kotlin DSL
+
+If your project uses the Kotlin DSL, use the following snippets:
+
+For the `settings.gradle.kts`:
+```Kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        [...]
+        maven(url = uri("https://repo.swarovskioptik.com/repository/maven-swarovski-optik/"))
+    }
+}
+```
+
+For the module/app level `build.gradle.kts`:
+
+```Kotlin
+dependencies {
+    implementation("com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]")
+    [...]
+}
+```
 
 
 ## Build an API instance
