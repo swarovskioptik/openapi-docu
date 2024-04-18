@@ -38,6 +38,13 @@ To deploy the documentation including the API reference, just execute
 This will build the final HTML files and pushes them to the `gh-pages` branch
 to github.
 
+## Background
+
+The structure of the documentation is based
+[The Documentation System - The Grand Unified Theory of Documentation](https://documentation.divio.com/).
+It divides the documentation into four parts: tutorials, How-To guides,
+explanation and reference.
+
 
 ## Open Issues
 

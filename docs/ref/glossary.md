@@ -16,7 +16,7 @@ the OpenAPI documentation, the SO Comm SDK, the SO Comm Outside API Library, ...
 
 The SO Comm SDK is a set of libraries that can be included in Android
 applications. These allow to connect to an AX Visio and perform various
-actions. See [Intro > SO Comm SDK](../intro/so-comm-sdk.md) for details.
+actions. See [SO Comm SDK](../exp/so-comm-sdk.md) for details.
 
 ## SO Comm Outside API
 
@@ -28,15 +28,15 @@ subscribing to topics.  Its API reference can be found here:
 ## SO Context
 
 A [SO Context](../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/index.html)
-contains a set of communication endpoints that are, from a usage
-point of view, related to each other, have similar needs for communication
-bandwidth and access control requirements. On Swarovski Optik devices
-SO Contexts can be provided by applications or system services, which might be
-used by several applications. On smartphones apps can use a SO Context, when it
-is provided by a Swarovski Optik device and the app has access to it.
+contains a set of communication endpoints that are, from a usage point of view,
+related to each other, have similar needs for communication bandwidth and
+access control requirements. On Swarovski Optik devices SO Contexts can be
+provided by applications or system services, which might be used by several
+applications. On smartphones applications can use a SO Context, when it is
+provided by a Swarovski Optik device and the app has access to it.
 
 All SO Contexts that are exposed for the OpenAPI are listed here:
-[OpenAPI > Available Contexts](../intro/openapi.md#available-contexts)
+[OpenAPI > Available Contexts](../exp/openapi.md#available-contexts)
 
 ## Use or release a context
 
@@ -70,9 +70,9 @@ to an *out* topic.
 ## OpenAPI Contexts
 
 This name stands for the special `OpenAPIContext` and the `OpenAPIContextBLE`
-and the additional contexts that are available for third party apps that are
-using the OpenAPI.  The full list of contexts is available at [Introduction -
-OpenAPI](../intro/openapi.md).
+and the additional contexts that are available for third party applications
+that are using the OpenAPI.  The full list of contexts is available at
+[OpenAPI](../exp/openapi.md).
 
 ## Inside vs Outside Applications
 

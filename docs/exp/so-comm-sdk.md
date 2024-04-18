@@ -50,7 +50,7 @@ developed: The *SO Comm Inside API* the *SO Comm Outside API*. For the
 Swarovski Optics OpenAPI only the later is relevant.
 
 An Outside App registers to use one or multiple SOContexts via the
-[SoCommOutsideAPI object](../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/index.html)
+[SOCommOutsideAPI object](../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/index.html)
 Moreover, the SOContext defines whether BLE only is sufficient or also WiFi
 will be used for transmitting data.
 
@@ -126,4 +126,4 @@ given out by Swarovski Optik to application developers.
 
 An API key is tied to a specific set of SOContexts. For the OpenAPI usages the API key will
 grant accees to the OpenAPI and the other relevant contexts.
-See [OpenAPI > Available Contexts](../intro/openapi/#available-contexts).
+See [OpenAPI > Available Contexts](openapi.md#available-contexts).

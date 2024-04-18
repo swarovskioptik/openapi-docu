@@ -1,11 +1,14 @@
 # OpenAPI
 
-The OpenAPI is provided by the OpenAPI Inside App. A user has to select the
-OpenAPI App on the selection wheel. Otherwise the contexts are not
-available and the outside app cannot uses the contexts. If the app is selected
-on the selection wheel, but the contexts are not available, the user may has to
-press the power button. The contexts are only provided when the screen is
-turned on.
+The OpenAPI is provided by the OpenAPI Inside App. The logo of the OpenAPI is
+
+![OpenAPI symbol](../img/openapi.svg)
+
+A user has to select the OpenAPI App on the selection wheel.  Otherwise the
+contexts are not available and the outside app cannot uses the contexts. If the
+app is selected on the selection wheel, but the contexts are not available, the
+user may has to press the power button. The contexts are only provided when the
+screen is turned on.
 
 ## Available Contexts
 
@@ -61,7 +64,7 @@ when it uses the OpenAPI context again.
 ## KeyListener
 
 The AX Visio has three different keys or buttons: The power button, the scroll button and the release button.
-See [AX Visio > Buttons](../intro/ax-visio.md#buttons) for details.
+See [AX Visio > Buttons](../exp/ax-visio.md#buttons) for details.
 
 In the OpenAPI these three different keys and two states are represented as the string constants:
 
