@@ -33,7 +33,7 @@ This issue will be cleanuped later.
 
 To deploy the documentation including the API reference, just execute
 
-   $ mkdocs gh-deploy
+    $ mkdocs gh-deploy
 
 This will build the final HTML files and pushes them to the `gh-pages` branch
 to github.

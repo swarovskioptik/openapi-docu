@@ -12,14 +12,20 @@ the recommend and working way to add the *SO Comm SDK* to your application.
 A working example and the currently recommend reference can be found in the
 [example applications](../ref/example-applications.md).
 
-## Include the Library
+## Include the Library - for Groovy DSL
 
 If you want to include the SDK using the gradle, you need to configure a new
 repository to fetch the SDK from.  This can best be done in your root projects
-`build.gradle` file to add the repository for all your modules:
+`settings.gradle` file to add the repository for all your modules:
 
 ```groovy
-TODO
+dependencyResolutionManagement {
+    [...]
+    repositories {
+        [...]
+        maven { url "https://repo.swarovskioptik.com/repository/maven-swarovski-optik/" }
+    }
+}
 ```
 
 After the repository has been added, you can add the dependency like any other gradle/maven
