@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/impressum/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/intro/ax-visio/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/intro/kotlin-extensions/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/intro/openapi/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/intro/so-comm-sdk/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/ref/api-reference/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/ref/example-applications/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/ref/glossary/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/ref/releases/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swarovskioptik.github.io/openapi-docu/tutorial/how-to-add-the-so-comm-sdk/</loc>
-         <lastmod>2024-04-18</lastmod>
+         <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
