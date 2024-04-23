@@ -23,10 +23,10 @@ on the commandline and open the displayed link in the browser.
 
 To build the API reference, execute
 
-    $ scripts/setup-reference.sh
+    $ scripts/generate-reference.sh
 
 NOTE: This requires a patched `falke-sdk-android` repo at the correct location.
-This issue will be cleanuped later.
+Please have a look at the internal doku.
 
 
 ## How to deploy
