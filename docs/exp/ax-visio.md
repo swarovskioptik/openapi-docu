@@ -23,6 +23,8 @@ binocular. It controls which application is currently active. There are eight
 different symbols on the selection wheel. For example a symbol for the camera
 application or a symbol for the Merlin Bird Id application.
 
+![Mode selection wheel](../img/mode-selection-wheel.png)
+
 The OpenAPI functionality and app has the following symbol:
 
 ![OpenAPI symbol](../img/openapi.svg)

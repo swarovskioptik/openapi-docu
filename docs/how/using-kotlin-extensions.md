@@ -1,4 +1,4 @@
-# Kotlin Extensions
+# Using Kotlin extensions
 
 The SDK is based on RxJava 2. If your app is based on Kotlin Coroutines / Flow,
 wrapper for APIs that provide the functionality using suspending functions and
@@ -15,8 +15,11 @@ function `.asFlowApi()` that will return a respective coroutine / flow instance.
 You can add these libraries to your `build.gradle` like
 
 ```groovy
-implementation "com.swarovskioptik.comm::FlowSOCommMediaClientWrapper:[CURRENT_LIBRARY_VERSION]"
-implementation "com.swarovskioptik.comm::FlowSOCommOutsideAPIWrapper:[CURRENT_LIBRARY_VERSION]"
+dependencies {
+    implementation "com.swarovskioptik.comm::FlowSOCommMediaClientWrapper:[CURRENT_LIBRARY_VERSION]"
+    implementation "com.swarovskioptik.comm::FlowSOCommOutsideAPIWrapper:[CURRENT_LIBRARY_VERSION]"
+    [...]
+}
 ```
 
 Replace the term `[CURRENT_LIBRARY_VERSION]` with the current library version.

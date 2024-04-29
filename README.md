@@ -23,10 +23,10 @@ on the commandline and open the displayed link in the browser.
 
 To build the API reference, execute
 
-    $ scripts/setup-reference.sh
+    $ scripts/generate-reference.sh
 
 NOTE: This requires a patched `falke-sdk-android` repo at the correct location.
-This issue will be cleanuped later.
+Please have a look at the internal doku.
 
 
 ## How to deploy
@@ -37,6 +37,13 @@ To deploy the documentation including the API reference, just execute
 
 This will build the final HTML files and pushes them to the `gh-pages` branch
 to github.
+
+## Background
+
+The structure of the documentation is based
+[The Documentation System - The Grand Unified Theory of Documentation](https://documentation.divio.com/).
+It divides the documentation into four parts: tutorials, How-To guides,
+explanation and reference.
 
 
 ## Open Issues
