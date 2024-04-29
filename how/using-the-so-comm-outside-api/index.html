@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/tutorial/how-to-add-the-so-comm-sdk/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/how/using-the-so-comm-outside-api/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>How to add the SO Comm SDK - Swarovski Optik OpenAPI Documentation</title>
+    <title>Using the SO Comm Outside API - Swarovski Optik OpenAPI Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "How to add the SO Comm SDK";
-        var mkdocs_page_input_path = "tutorial/how-to-add-the-so-comm-sdk.md";
-        var mkdocs_page_url = "/openapi-docu/tutorial/how-to-add-the-so-comm-sdk/";
+        var mkdocs_page_name = "Using the SO Comm Outside API";
+        var mkdocs_page_input_path = "how/using-the-so-comm-outside-api.md";
+        var mkdocs_page_url = "/openapi-docu/how/using-the-so-comm-outside-api/";
       </script>
     
     <!--[if lt IE 9]>
@@ -43,26 +43,29 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <p class="caption"><span class="caption-text">Explanations</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../intro/ax-visio/">AX Visio</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/ax-visio/">AX Visio</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../intro/so-comm-sdk/">SO Comm SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/so-comm-sdk/">SO Comm SDK</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../intro/openapi/">OpenAPI</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../intro/kotlin-extensions/">Kotlin Extensions</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/openapi/">OpenAPI</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/requesting-an-api-key/">Requesting an API key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/using-the-example-application/">Using the example application</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">How to add the SO Comm SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../adding-the-so-comm-sdk-libraries/">Adding the SO Comm SDK libraries your application</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Using the SO Comm Outside API</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#warning">Warning</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#include-the-library-for-groovy-dsl">Include the Library - for Groovy DSL</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#build-an-api-instance">Build an API instance</a>
+    <li class="toctree-l2"><a class="reference internal" href="#using-the-socommoutsideapibuilder">Using the SOCommOutsideAPIBuilder</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#logging">Logging</a>
     </li>
@@ -70,15 +73,19 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#search-for-a-device">Search for a device</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#android-permissions">Android Permissions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bluetooth">Bluetooth</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#establish-a-connection">Establish a connection</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#use-release-contexts">Use &amp; Release contexts</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#publish-subscribe">Publish &amp; Subscribe</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#full-code-example">Full code example</a>
-    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-kotlin-extensions/">Using Kotlin extensions</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">References</span></p>
@@ -92,9 +99,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -110,8 +120,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Tutorials</li>
-      <li class="breadcrumb-item active">How to add the SO Comm SDK</li>
+          <li class="breadcrumb-item">How-To Guides</li>
+      <li class="breadcrumb-item active">Using the SO Comm Outside API</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -120,38 +130,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="how-to-add-the-so-comm-sdk">How to add the SO Comm SDK</h1>
-<p>This tutorial will walk you trough the necessary steps to add the <em>SO Comm SDK</em>
-to your Android Application.  As an alternative you can also look at one of the
-<a href="../../ref/example-applications/">example applications</a>.</p>
-<h2 id="warning">Warning</h2>
-<p><strong>Warning</strong>: This content is not yet updated. The explanations and code examples do not yet reflect
-the recommend and working way to add the <em>SO Comm SDK</em> to your application.</p>
-<p>A working example and the currently recommend reference can be found in the
-<a href="../../ref/example-applications/">example applications</a>.</p>
-<h2 id="include-the-library-for-groovy-dsl">Include the Library - for Groovy DSL</h2>
-<p>If you want to include the SDK using the gradle, you need to configure a new
-repository to fetch the SDK from.  This can best be done in your root projects
-<code>settings.gradle</code> file to add the repository for all your modules:</p>
-<pre><code class="language-groovy">dependencyResolutionManagement {
-    [...]
-    repositories {
-        [...]
-        maven { url &quot;https://repo.swarovskioptik.com/repository/maven-swarovski-optik/&quot; }
-    }
-}
-</code></pre>
-<p>After the repository has been added, you can add the dependency like any other gradle/maven
-dependency in your module/app level <code>build.gradle</code> file:</p>
-<pre><code class="language-groovy">implementation &quot;com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]&quot;
-</code></pre>
-<p>Replace the term <code>[CURRENT_LIBRARY_VERSION]</code> with the current library version.
-See for <a href="../../ref/releases/">Releases of the SO Comm SDK</a> for details.</p>
-<h2 id="build-an-api-instance">Build an API instance</h2>
+                <h1 id="using-the-so-comm-outside-api">Using the SO Comm Outside API</h1>
 <p>The <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/">SOCommOutsideAPI</a>
 can be instantiated by using the provided
 <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i-builder/">SOCommOutsideAPIBuilder</a>
 class:</p>
+<h2 id="using-the-socommoutsideapibuilder">Using the SOCommOutsideAPIBuilder</h2>
 <pre><code class="language-kotlin">val api = SOCommOutsideAPIBuilder(this)
     .apiKey(&quot;[YOUR_API_KEY]&quot;)
     .build()
@@ -160,9 +144,9 @@ class:</p>
 <a href="https://developer.android.com/reference/android/app/Activity">Android Activity</a>,
 which is an <a href="https://developer.android.com/reference/android/content/Context">Android Context</a>.</p>
 <p>You have to replace the <code>[YOUR_API_KEY]</code> with your own personal API key.
-The API key can be requested from Swarovski Optik, e.g.
-<a href="how-to-request-an-api-key.md">How to request an API Key</a> for details.</p>
-<p>The API key is needed to authentice your applications against the device.</p>
+The API key can be requested from Swarovski Optik. See
+<a href="../../tut/requesting-an-api-key/">Requesting an API key</a> for details.  The API
+key is needed to authentice your applications against the device.</p>
 <h2 id="logging">Logging</h2>
 <p>You can configure debug, warning and error logs, too. For example you could log error logs in
 production to e.g. Crashlytics, and warning logs in debug builds to the logcat. The debug-logs are
@@ -195,7 +179,7 @@ specific calls, please refer to their JavaDocs.</p>
 <h2 id="search-for-a-device">Search for a device</h2>
 <p>If you don't know the name of the device and want to search for nearby devices,
 the SDK provides a
-<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-device-searcher/"><code>SOCommDeviceSearcher</code></a> interface
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-device-searcher/">SOCommDeviceSearcher</a> interface
 that can be used to get a live list of devices found nearby:</p>
 <pre><code class="language-kotlin">// Create an instance using the create method
 val deviceSearcher = SOCommDeviceSearcher.create(this)
@@ -209,81 +193,103 @@ val disposable = deviceSearcher.search()
                 Log.d(&quot;DeviceSearcher&quot;, &quot;Found device $foundDevice&quot;)
             }
         },
-        { throwable -&gt; Log.e(&quot;DeviceSearcher&quot;, &quot;Error: ${throwable.message}&quot;) }
+        { e -&gt; Log.e(&quot;DeviceSearcher&quot;, &quot;Error: ${e.message}&quot;, e) }
     )
 
 // Dispose when the search should be stopped:
 disposable.dispose()
 </code></pre>
+<h2 id="android-permissions">Android Permissions</h2>
+<p>The library needs some <a href="https://developer.android.com/guide/topics/permissions/overview">install and runtime
+permissions</a>
+to operate. These are already declared in the <code>AndroidManifest.xml</code> of the SO
+Comm Outside API library, so you don't have to declare these in our
+application's manifest yourself. They are added automatically.</p>
+<p>The needed permissions are described in the
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connect.html">connect()</a>
+method. Requesting the runtime permissions is <em>not</em> done by the SO Comm Outside API
+library. These are</p>
+<ul>
+<li>Manifest.permission.ACCESS_FINE_LOCATION</li>
+<li>Manifest.permission.BLUETOOTH_SCAN</li>
+<li>Manifest.permission.BLUETOOTH_CONNECT</li>
+<li>Manifest.permission.BLUETOOTH_ADVERTISE</li>
+</ul>
+<p>Your application has to request them itself. See the
+<a href="../../ref/example-applications/">example applications</a> for details.</p>
+<h2 id="bluetooth">Bluetooth</h2>
+<p>Additionally the user has to enable bluetooth. Checking whether Bluetooth is
+enabled, can be done with Android's
+<a href="https://developer.android.com/reference/android/bluetooth/BluetoothManager">BluetoothManager</a>.</p>
+<p>For an example please have a look at the the
+<a href="../../ref/example-applications/">example applications</a>, too.</p>
 <h2 id="establish-a-connection">Establish a connection</h2>
 <p>Basically you can connect to a remote device using the
-<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connect.html"><code>connect()</code></a>
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connect.html">connect()</a>
 method with the device name you want to connect to. Once the operation
 completes, the connection has been established. Please refer to the JavaDocs of
 the connect method for a detailed description as well as possible error cases.</p>
 <p>You can disconnect anytime by calling the
-<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/disconnect.html"><code>disconnect()</code></a>
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/disconnect.html">disconnect()</a>
 method.</p>
-<pre><code class="language-kotlin">api.connect(&quot;DeviceName&quot;)
+<pre><code class="language-kotlin">val compositeDisposable = CompositeDisposable()
+
+api.connect(&quot;DeviceName&quot;)
     .subscribe(
         {
             Log.d(&quot;API&quot;, &quot;Successfully connected to the remote device&quot;)
             // now you are connected. You can use/release contexts now, and publish/subscribe topics.
             // ...
         },
-        { Log.e(&quot;API&quot;, &quot;Error while connecting to remote device&quot;) }
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error while connecting to remote device&quot;, e) }
     )
     .addTo(compositeDisposable)
 
 //If you want to exit the application / want to disconnect gracefully:
 api.disconnect()
     .subscribe(
-        onComplete = { Log.d(&quot;API&quot;, &quot;Successfully disconnected from the remote device&quot;) },
-        onError = { Log.e(&quot;API&quot;, &quot;Error while disconnecting from the remote device&quot;) }
+        { Log.d(&quot;API&quot;, &quot;Successfully disconnected from the remote device&quot;) },
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error while disconnecting from the remote device&quot;, e) }
     )
     .addTo(compositeDisposable)
 </code></pre>
-<p>The <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connection-state.html"><code>connectionState</code></a>
+<p>The <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connection-state.html">connectionState</a>
 will emit a new item any time the connection state changes, so you can
 subscribe to that to be informed of any connection state changes.</p>
 <p>(In more detail, the implementation of
-the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connection-state.html"><code>connectionState</code></a>
+the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connection-state.html">connectionState</a>
 Observable is done using <code>BehaviorRelay</code>s, which means that when subscribing to it, the current
 state is emitted nearly instantly for each subscriber. So it is safe and legit to use that with
 the <code>blockingFirst</code> or <code>firstOrError</code> operators.)</p>
-<p>The SDK needs some permissions (which are all declared and explained in the JavaDoc of
-the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/connect.html"><code>connect()</code></a>
-method). The permissions need to be granted before calling <code>connect()</code> or
+<p>The permissions need to be granted before calling <code>connect()</code> or
 otherwise the <code>connect()</code> method will error with a
-<a href="../../reference/SOBase/com.swarovskioptik.exception/-permission-not-granted-exception/"><code>PermissionNotGrantedException</code></a>.
-Only RuntimePermission which needs to be requested from the user beforehand is
-the <code>ACCESS_FINE_LOCATION</code> permission, all other permissions are non-dangerous
-permissions and already declared in the libraries Manifest.</p>
+<a href="../../reference/SOBase/com.swarovskioptik.exception/-permission-not-granted-exception/">PermissionNotGrantedException</a>.
+See the previous sections.</p>
 <h2 id="use-release-contexts">Use &amp; Release contexts</h2>
 <p>The topics you want to publish/subscribe to are grouped in different <em>contexts</em> (the class is named
-<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/"><code>SOContext</code></a>
+<a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/">SO Context</a>
 easily distinguishable with the Android Context). A context defines a set of topics which can either
 be subscribed or published to. Furthermore, a context defines which type of connection the topics
 within that topic require.</p>
 <p>Therefore, to be able to publish or subscribe to topics, you need to use the respective context
 first.</p>
 <p>To use a context, call
-the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/use.html"><code>use()</code></a> method.
+the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/use.html">use()</a> method.
 This method returns a Completable which completes once the initialization of
-the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/"><code>SOContext</code></a> has
+the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-s-o-context/">SO Context</a> has
 been done.</p>
 <pre><code class="language-kotlin">// after `api.connect()` has completed
 
 api.use(SomePredefinedContext)
     .subscribe(
-        onComplete = {
+        {
             // This signals, that the context has been successfully initialized.
             // now you can publish / subscribe topics of the context.
             // The subscription emitted by use here also emits all items which are emitted
             // on any topic of the given context.
             Log.d(&quot;API&quot;, &quot;context 'SomePredefinedContext' is now in use&quot;)
         },
-        onError = { Log.e(&quot;API&quot;, &quot;Error while using the context&quot;) }
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error while using the context&quot;, e) }
     )
     .addTo(compositeDisposable)
 </code></pre>
@@ -291,13 +297,13 @@ api.use(SomePredefinedContext)
 anymore), you should release a context again. You should not hold context in use if you don't need
 them.</p>
 <p>To release a context, call the
-<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/release.html"><code>release()</code></a>
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/release.html">release()</a>
 method with the context which should be released.</p>
 <pre><code class="language-kotlin">// after `api.connect()` has completed and a context has been used (`api.use()`) which contains the given topic
 api.release(TestTopics.SomeTopic)
     .subscribe(
-        onComplete = { Log.d(&quot;API&quot;, &quot;Successfully released the given context&quot;) },
-        onError = { Log.e(&quot;API&quot;, &quot;Error while releasing&quot;) }
+        { Log.d(&quot;API&quot;, &quot;Successfully released the given context&quot;) },
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error while releasing&quot;, e) }
     )
     .addTo(compositeDisposable)
 </code></pre>
@@ -311,21 +317,21 @@ device, such contexts should only be used if needed, and be released when no lon
 <h2 id="publish-subscribe">Publish &amp; Subscribe</h2>
 <p>The actual communication is implemented using a publish-subscribe messaging pattern (somewhat
 similar to what MQTT implements). So to send messages, you need
-to <a href="../../reference/SDK/com.swarovskioptik.comm/-base-s-o-comm-outside-a-p-i/publish-topic.html"><code>publish</code></a>
-them on a given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic/"><code>Topic</code></a>
+to <a href="../../reference/SDK/com.swarovskioptik.comm/-base-s-o-comm-outside-a-p-i/publish-topic.html">publish</a>
+them on a given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic/">Topic</a>
 , and to receive messages of a given type, you need
-to <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/subscribe-topic.html"><code>subscribe</code></a>
-a given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic/"><code>Topic</code></a>.</p>
+to <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/subscribe-topic.html">subscribe</a>
+a given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic/">Topic</a>.</p>
 <p>Topics are (predefined) classes (objects) that implement
-the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-in/"><code>TopicIn</code></a>
-or <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-out/"><code>TopicOut</code></a>
+the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-in/">TopicIn</a>
+or <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-out/">TopicOut</a>
 interface, depending on whether they are topics to be subscribed or topics to be published. Each
 topic can either be a topic that can be published from the outside, or can be subscribed from the
 outside, but not both.</p>
 <p>To publish values on a topic (send them to the remote device), call
-the <a href="../../reference/SDK/com.swarovskioptik.comm/-base-s-o-comm-outside-a-p-i/publish-topic.html"><code>publishTopic()</code></a>
+the <a href="../../reference/SDK/com.swarovskioptik.comm/-base-s-o-comm-outside-a-p-i/publish-topic.html">publishTopic()</a>
 method. Pass
-the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-in/"><code>TopicIn</code></a> to send
+the <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-in/">TopicIn</a> to send
 the value on as well as the value to be sent here. The type of the data to be emitted is defined by
 the given <code>TopicIn</code>.</p>
 <p>Each <code>TopicIn</code> has its own serializer, which will serialize the given value and
@@ -335,83 +341,33 @@ the other end).</p>
 <pre><code class="language-kotlin">// after `api.connect()` has completed and a context has been used (`api.use()` has completed) which contains the given topic.
 api.publishTopic(Topics.SomeTopic, &quot;Some value&quot;)
     .subscribe(
-        onComplete = { Log.d(&quot;API&quot;, &quot;Successfully published to the remote device&quot;) },
-        onError = { Log.e(&quot;API&quot;, &quot;Error while publishing&quot;) }
+        { Log.d(&quot;API&quot;, &quot;Successfully published to the remote device&quot;) },
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error while publishing&quot;, e) }
     )
     .addTo(compositeDisposable)
 </code></pre>
 <p>To subscribe to a topic (receive values from the remote device), call
-the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/subscribe-topic.html"><code>subscribeTopic()</code></a>
+the <a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/subscribe-topic.html">subscribeTopic()</a>
 method. The returned observable will emit all items received from the remote device de-serialized to
 the original type again. The type of item which is emitted by the subscription is defined by the
-given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-out/"><code>TopicOut</code></a>.</p>
+given <a href="../../reference/SharedDefinitions/com.swarovskioptik.comm.definition/-topic-out/">TopicOut</a>.</p>
 <p>Note that in order to be able to publish or subscribe to a topic, at least one context must be in
 use which includes the given topic. Otherwise, the methods will emit an error.</p>
 <pre><code class="language-kotlin">// after `api.connect()` has completed and a context has been used (`api.use()`) which contains the
 // given topic (and its `Initialized` item has been emitted)
 api.subscribeTopic(Topics.SomeTopic)
     .subscribe(
-        onNext = { item -&gt; Log.d(&quot;API&quot;, &quot;SomeTopic emitted an item: $item&quot;) },
-        onError = { Log.e(&quot;API&quot;, &quot;Error during subscription&quot;) }
+        { item -&gt; Log.d(&quot;API&quot;, &quot;SomeTopic emitted an item: $item&quot;) },
+        { e -&gt; Log.e(&quot;API&quot;, &quot;Error during subscription&quot;, e) }
     )
     .addTo(compositeDisposable)
-</code></pre>
-<h2 id="full-code-example">Full code example</h2>
-<p>An exemplary full usage example can be seen below.</p>
-<p><em>Please note</em> that this is a minimal working example, and that your use-case will most likely be
-that the connection to the remote device is established while the user is within your app, and that
-you will use contexts for a longer time period than for just publishing one item and subscribing
-until one item has been received.</p>
-<pre><code class="language-kotlin">// create an instance of the SOCommOutsideAPI using your application context (activity context works as well), and your API key)
-val api = SOCommOutsideAPIBuilder(context)
-    .apiKey(&quot;[YOUR_API_KEY]&quot;)
-    .warningLogs { tag, message -&gt;
-        if (BuildConfig.DEBUG) {
-            Log.w(tag, message)
-        }
-    }
-    .errorLogs { tag, message -&gt;
-        //You may want to log errors also in release builds.
-        Crashlytics.logException(RuntimeException(&quot;$tag: $message&quot;))
-    }
-    .build()
-
-api.connect(&quot;AX_Visio&quot;)
-    .andThen(
-        // use a context and wait for it to be initialized
-        api.use(SOContext.DistanceEstimation)
-    )
-    .andThen(
-        // publish an item to the topic `TestTopics.Switch` (with the value &quot;true&quot;).
-        // The type of the value is predefined by the topic.
-        api.publishTopic(TestTopics.Switch, true)
-    )
-    .andThen(
-        api.subscribeTopic(Topics.DistanceEstimation)
-            .firstOrError()
-            .doOnSuccess { distanceEstimationItem -&gt;
-                Log.d(
-                    &quot;DistanceEstimation&quot;,
-                    &quot;received distance estimation: ${distanceEstimationItem.distance} ${distanceEstimationItem.unit.name}&quot;
-                )
-            }
-            .ignoreElement()
-    )
-    .andThen(
-        // when done using the context, release it again
-        api.release(SOContext.DistanceEstimation)
-    )
-    .andThen(
-        //when done with the connection to the remote device, disconnect
-        api.disconnect()
-    )
 </code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../intro/kotlin-extensions/" class="btn btn-neutral float-left" title="Kotlin Extensions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../ref/releases/" class="btn btn-neutral float-right" title="Releases of the SO Comm SDK">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../adding-the-so-comm-sdk-libraries/" class="btn btn-neutral float-left" title="Adding the SO Comm SDK libraries your application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using-kotlin-extensions/" class="btn btn-neutral float-right" title="Using Kotlin extensions">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -434,10 +390,10 @@ api.connect(&quot;AX_Visio&quot;)
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../intro/kotlin-extensions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../adding-the-so-comm-sdk-libraries/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../ref/releases/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../using-kotlin-extensions/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

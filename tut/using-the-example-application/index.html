@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/tut/using-the-example-application/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Using the example application - Swarovski Optik OpenAPI Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Using the example application";
+        var mkdocs_page_input_path = "tut/using-the-example-application.md";
+        var mkdocs_page_url = "/openapi-docu/tut/using-the-example-application/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Swarovski Optik OpenAPI Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/ax-visio/">AX Visio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/so-comm-sdk/">SO Comm SDK</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/openapi/">OpenAPI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../requesting-an-api-key/">Requesting an API key</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Using the example application</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisite">Prerequisite</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-0-android-studio-setup">Step 0: Android Studio Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-clone-the-example-code">Step 1: Clone the example code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-open-the-project-in-android-studio">Step 2: Open the project in Android Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-set-the-api-key">Step 3: Set the API key</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-build-the-example-application">Step 4: Build the example application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-deploy-it-on-your-smartphone">Step 5: Deploy it on your smartphone</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-connect-to-the-ax-visio">Step 6: Connect to the AX Visio</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#grant-permissions-and-enable-bluetooth">Grant permissions and enable Bluetooth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#search-and-connect-to-the-ax-visio">Search and connect to the AX Visio</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#start-the-openapi-inside-application">Start the OpenAPI Inside Application</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-7-using-the-application">Step 7: Using the application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#outlook">Outlook</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/adding-the-so-comm-sdk-libraries/">Adding the SO Comm SDK libraries your application</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/using-the-so-comm-outside-api/">Using the SO Comm Outside API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/using-kotlin-extensions/">Using Kotlin extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">References</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/releases/">Releases of the SO Comm SDK</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/api-reference/">API Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/example-applications/">Example Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Swarovski Optik OpenAPI Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutorials</li>
+      <li class="breadcrumb-item active">Using the example application</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-the-example-application">Using the example application</h1>
+<p>This tutorial should walk you trough the necessary steps to build and deploy
+the
+<a href="https://github.com/swarovskioptik/openapi-developer-example-app">OpenAPI Developer Example Application</a>.</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<p>You must have</p>
+<ul>
+<li>a personal computer which is capable of building Android
+  applications (This is possible on Windows, Linux and MacOS),</li>
+<li>an Android smartphone to run the example application,</li>
+<li>an AX Visio binocular and</li>
+<li>an personalized API key for using the OpenAPI
+  contexts (See the tutorial
+  <a href="../requesting-an-api-key/">Requesting an API key</a>).</li>
+</ul>
+<h2 id="step-0-android-studio-setup">Step 0: Android Studio Setup</h2>
+<p>If you are interested in the OpenAPI of the AX Visio you are mostly already an
+Android Application developer.  So you should have a working
+<a href="https://developer.android.com/studio">AndroidStudio</a> installation on your
+computer.  If not, follow the guide
+<a href="https://developer.android.com/studio/install">Install Android Studio</a>.</p>
+<h2 id="step-1-clone-the-example-code">Step 1: Clone the example code</h2>
+<p>On your computer clone the example code. E.g. by executing the command</p>
+<pre><code>$ git clone https://github.com/swarovskioptik/openapi-developer-example-app.git
+</code></pre>
+<p>You can also use the <a href="https://cli.github.com/">Github CLI</a> for that.</p>
+<h2 id="step-2-open-the-project-in-android-studio">Step 2: Open the project in Android Studio</h2>
+<p>It's possible to build and deploy the project on the command line, but this
+tutorial we use Android Studio. It will provide some convenience features like
+selecting the development target and staring the smartphone application
+automatically.</p>
+<p>First open Android Studio by using the launcher menu of your operating system.
+Then click <em>File &gt; Open…</em> in the top menu bar and select the directory of the
+freshly checkout repo.</p>
+<p>Android studio starts parsing and executing the gradle build system. This
+process will fail with the error message</p>
+<blockquote>
+<p>Please add 'OPENAPI_API_KEY' property!</p>
+</blockquote>
+<p>This is o.k. for now. It will be fixed in the next step.</p>
+<h2 id="step-3-set-the-api-key">Step 3: Set the API key</h2>
+<p>You must add your API key to the gradle build systems. First go into the root
+directory of the repository. Either with an file browser or in the left
+<em>project</em> window of Android Studio.</p>
+<p>Open the file <code>local.properties</code>. The file should already exist, because
+Android Studio created it when you first opened the project.  If the file does
+not exist yet, you can also create it.</p>
+<p>After that add the following line to the end:</p>
+<pre><code>OPENAPI_API_KEY = &lt;Add your API key here&gt;
+</code></pre>
+<p>And replace the brackets with your API key.</p>
+<p>Now the parsing and executing of the gradle build system should finish
+successfully.  Click <em>Try Again</em> in Android Studio to restart it.</p>
+<h2 id="step-4-build-the-example-application">Step 4: Build the example application</h2>
+<p>This can be either done on the command line or with Android Studio. The easiest
+way is to use Android Studio, because it also allows you to deploy and start
+the example application on your smartphone, too.</p>
+<p>In Android studio click <em>Build &gt; Make Project</em> in the menu bar at the top.  The
+application should built successfully.</p>
+<h2 id="step-5-deploy-it-on-your-smartphone">Step 5: Deploy it on your smartphone</h2>
+<p>After building the application with your API key, you should run it on your
+smartphone.  For that your smartphone must be in developer mode and connected
+to your computer. Either with a USB cable or with the wireless debugging
+feature of Android over Wi-Fi.</p>
+<p>For instructions please read the
+<a href="https://developer.android.com/studio/run/device">Run apps on a hardware device</a>
+Guide for Android Studio.</p>
+<p>If your phone is setup and connected, you can deploy and run the
+application by clicking <em>Run &gt; Run 'app'</em> from the menu bar at the top.</p>
+<p>On your smartphone you should see the following screen now:</p>
+<p><img alt="OpenAPI Developer Example App Intro Screen" src="../../img/openapi-developer-example-app-screen-intro.png" /></p>
+<h2 id="step-6-connect-to-the-ax-visio">Step 6: Connect to the AX Visio</h2>
+<p>Your freshly built example app is running on your smartphone now. The next
+steps are to connect the app with your AX Visio device.</p>
+<p>For that the example shows instructions on the screen that walks the user
+trough the process. In detail these are the following steps:</p>
+<h3 id="grant-permissions-and-enable-bluetooth">Grant permissions and enable Bluetooth</h3>
+<p>On the smartphone touch the <em>Start</em> Button to start the connection process.</p>
+<p>Now you should see a screen that tells the user to enable Bluetooth and grant
+the necessary runtime permissions. You should touch the button and grant the
+necessary permissions to the application. Then you should enable Bluetooth in
+the settings menu of your smartphone.</p>
+<p>When both requirements are fulfilled, the next screen appears.</p>
+<h3 id="search-and-connect-to-the-ax-visio">Search and connect to the AX Visio</h3>
+<p>The next screen of the app tells the user to start the AX Visio. Long press the
+power of the AX Visio until you see that the status LED blinking green.  The AX
+Visio is booting now.</p>
+<p>When the AX Visio runs and the smartphone has found the AX Visio device, the
+button on the screen is clickable and also shows the name the found device.</p>
+<p>Click the button to start the connection process. If you connect your smartphone
+with the AX Visio for the first time, your smartphone shows a pairing request
+in the notification area.  Touch <em>Pair &amp; Connect</em> to continue.</p>
+<p>To finish the pairing process, you must enter a PIN on the smartphones display.
+The PIN is shown in the display of the AX Visio. After entering the PIN and
+continued the dialog, you have finished the paring process.</p>
+<h3 id="start-the-openapi-inside-application">Start the OpenAPI Inside Application</h3>
+<p>The example application is connected to the AV Visio. Now you have to start the
+OpenAPI Inside Application on the AX Visio. The example app also shows
+instructions on the screen.</p>
+<p>Rotate the <a href="../../exp/ax-visio/#mode-selection-wheel">mode selection wheel</a> to the
+symbol of the OpenAPI. It looks like</p>
+<p><img alt="OpenAPI symbol" src="../../img/openapi.svg" /></p>
+<p>The OpenAPI is successfully started on the AX Visio, when you see the text
+"Please Connect" in the UI of the binocular. Trough the binocular you should
+see</p>
+<p><img alt="OpenAPI Inside App - Please Connect" src="../../img/openapi-inside-app-screen.png" /></p>
+<p>Then the <em>Continue</em> button in the example application is clickable, because the
+OpenAPI is available on the AX Visio. Touch the button to start the main screen
+of the example application.</p>
+<h2 id="step-7-using-the-application">Step 7: Using the application</h2>
+<p>Now the example app is connected to the AV Visio and uses the OpenAPI.  You
+should see the screen:</p>
+<p><img alt="OpenAPI Developer Example App Intro Screen" src="../../img/openapi-developer-example-app-screen-main.png" /></p>
+<p>This means that your application succesfully connceted to the AX Visio and
+successfully used one feature of the OpenAPI: it configured a key to take a
+photo.</p>
+<h2 id="outlook">Outlook</h2>
+<p>Congratulations! Now you have built, deployed and ran your first Android
+application that used the OpenAPI of the AX Visio.</p>
+<p>As next steps you can look at the code of the example application or read one
+of the How-To guides.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../requesting-an-api-key/" class="btn btn-neutral float-left" title="Requesting an API key"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../how/adding-the-so-comm-sdk-libraries/" class="btn btn-neutral float-right" title="Adding the SO Comm SDK libraries your application">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../requesting-an-api-key/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../how/adding-the-so-comm-sdk-libraries/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

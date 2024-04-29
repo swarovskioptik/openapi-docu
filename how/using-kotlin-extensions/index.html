@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/intro/kotlin-extensions/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/how/using-kotlin-extensions/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Kotlin Extensions - Swarovski Optik OpenAPI Documentation</title>
+    <title>Using Kotlin extensions - Swarovski Optik OpenAPI Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Kotlin Extensions";
-        var mkdocs_page_input_path = "intro/kotlin-extensions.md";
-        var mkdocs_page_url = "/openapi-docu/intro/kotlin-extensions/";
+        var mkdocs_page_name = "Using Kotlin extensions";
+        var mkdocs_page_input_path = "how/using-kotlin-extensions.md";
+        var mkdocs_page_url = "/openapi-docu/how/using-kotlin-extensions/";
       </script>
     
     <!--[if lt IE 9]>
@@ -43,22 +43,31 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Introduction</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../ax-visio/">AX Visio</a>
+              <p class="caption"><span class="caption-text">Explanations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/ax-visio/">AX Visio</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../so-comm-sdk/">SO Comm SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/so-comm-sdk/">SO Comm SDK</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../openapi/">OpenAPI</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Kotlin Extensions</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/openapi/">OpenAPI</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorial/how-to-add-the-so-comm-sdk/">How to add the SO Comm SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/requesting-an-api-key/">Requesting an API key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/using-the-example-application/">Using the example application</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adding-the-so-comm-sdk-libraries/">Adding the SO Comm SDK libraries your application</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-so-comm-outside-api/">Using the SO Comm Outside API</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Using Kotlin extensions</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">References</span></p>
@@ -72,9 +81,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -90,8 +102,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Introduction</li>
-      <li class="breadcrumb-item active">Kotlin Extensions</li>
+          <li class="breadcrumb-item">How-To Guides</li>
+      <li class="breadcrumb-item active">Using Kotlin extensions</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -100,7 +112,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="kotlin-extensions">Kotlin Extensions</h1>
+                <h1 id="using-kotlin-extensions">Using Kotlin extensions</h1>
 <p>The SDK is based on RxJava 2. If your app is based on Kotlin Coroutines / Flow,
 wrapper for APIs that provide the functionality using suspending functions and
 Flows are available as:</p>
@@ -113,8 +125,11 @@ Flows are available as:</p>
 <p>In each case, build the SDK as stated above with the respective builder, and use the extension
 function <code>.asFlowApi()</code> that will return a respective coroutine / flow instance.</p>
 <p>You can add these libraries to your <code>build.gradle</code> like</p>
-<pre><code class="language-groovy">implementation &quot;com.swarovskioptik.comm::FlowSOCommMediaClientWrapper:[CURRENT_LIBRARY_VERSION]&quot;
-implementation &quot;com.swarovskioptik.comm::FlowSOCommOutsideAPIWrapper:[CURRENT_LIBRARY_VERSION]&quot;
+<pre><code class="language-groovy">dependencies {
+    implementation &quot;com.swarovskioptik.comm::FlowSOCommMediaClientWrapper:[CURRENT_LIBRARY_VERSION]&quot;
+    implementation &quot;com.swarovskioptik.comm::FlowSOCommOutsideAPIWrapper:[CURRENT_LIBRARY_VERSION]&quot;
+    [...]
+}
 </code></pre>
 <p>Replace the term <code>[CURRENT_LIBRARY_VERSION]</code> with the current library version.
 See for <a href="../../ref/releases/">Releases of the SOComm SDK</a> for details.</p>
@@ -122,8 +137,8 @@ See for <a href="../../ref/releases/">Releases of the SOComm SDK</a> for details
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../openapi/" class="btn btn-neutral float-left" title="OpenAPI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../tutorial/how-to-add-the-so-comm-sdk/" class="btn btn-neutral float-right" title="How to add the SO Comm SDK">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../using-the-so-comm-outside-api/" class="btn btn-neutral float-left" title="Using the SO Comm Outside API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../ref/releases/" class="btn btn-neutral float-right" title="Releases of the SO Comm SDK">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -146,10 +161,10 @@ See for <a href="../../ref/releases/">Releases of the SOComm SDK</a> for details
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../openapi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../using-the-so-comm-outside-api/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../tutorial/how-to-add-the-so-comm-sdk/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../ref/releases/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

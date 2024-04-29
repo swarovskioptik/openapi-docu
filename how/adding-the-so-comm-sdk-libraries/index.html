@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/how/adding-the-so-comm-sdk-libraries/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Adding the SO Comm SDK libraries your application - Swarovski Optik OpenAPI Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Adding the SO Comm SDK libraries your application";
+        var mkdocs_page_input_path = "how/adding-the-so-comm-sdk-libraries.md";
+        var mkdocs_page_url = "/openapi-docu/how/adding-the-so-comm-sdk-libraries/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Swarovski Optik OpenAPI Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/ax-visio/">AX Visio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/so-comm-sdk/">SO Comm SDK</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../exp/openapi/">OpenAPI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/requesting-an-api-key/">Requesting an API key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/using-the-example-application/">Using the example application</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Adding the SO Comm SDK libraries your application</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#adding-the-swarovski-optic-maven-repo">Adding the Swarovski Optic Maven repo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-the-so-comm-outside-api">Adding the SO Comm Outside API</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-the-so-comm-mediaclient">Adding the SO Comm MediaClient</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-so-comm-outside-api/">Using the SO Comm Outside API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-kotlin-extensions/">Using Kotlin extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">References</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/releases/">Releases of the SO Comm SDK</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/api-reference/">API Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/example-applications/">Example Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Swarovski Optik OpenAPI Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How-To Guides</li>
+      <li class="breadcrumb-item active">Adding the SO Comm SDK libraries your application</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="adding-the-so-comm-sdk-libraries-your-application">Adding the SO Comm SDK libraries your application</h1>
+<p>This guide explains how to add the
+<a href="../../reference/SDK/">SO Comm Outside API Library</a> and the
+<a href="../../reference/MediaClient/">SO Comm MediaClient</a>
+to your Android application.</p>
+<h2 id="adding-the-swarovski-optic-maven-repo">Adding the Swarovski Optic Maven repo</h2>
+<p>You need to configure a new repository to fetch the SDK libraries.</p>
+<p>For the Groovy DSL this can be done in your root project's <code>settings.gradle</code>
+file. Add the following lines to include the Swarovski Optik maven repository
+for all your modules:</p>
+<pre><code class="language-groovy">dependencyResolutionManagement {
+    [...]
+    repositories {
+        [...]
+        maven { url &quot;https://repo.swarovskioptik.com/repository/maven-swarovski-optik/&quot; }
+    }
+}
+</code></pre>
+<p>For the newer Kotlin DSL you must add the following to the <code>settings.gradle.kts</code>:</p>
+<pre><code class="language-Kotlin">dependencyResolutionManagement {
+    [...]
+    repositories {
+        [...]
+        maven(url = uri(&quot;https://repo.swarovskioptik.com/repository/maven-swarovski-optik/&quot;))
+    }
+}
+</code></pre>
+<h2 id="adding-the-so-comm-outside-api">Adding the SO Comm Outside API</h2>
+<p>After the repository has been added, you can add the dependency like any other
+gradle/maven dependency in your module/app level <code>build.gradle</code> file:</p>
+<pre><code class="language-groovy">dependencies {
+    implementation &quot;com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]&quot;
+    [...]
+}
+</code></pre>
+<p>Replace the term <code>[CURRENT_LIBRARY_VERSION]</code> with the current library version.
+See for <a href="../../ref/releases/">Releases of the SO Comm SDK</a> for details.</p>
+<p>If your project uses the Kotlin DSL, use the following snippets for the
+module/app level <code>build.gradle.kts</code>:</p>
+<pre><code class="language-Kotlin">dependencies {
+    implementation(&quot;com.swarovskioptik.comm:SOCommOutsideAPI:[CURRENT_LIBRARY_VERSION]&quot;)
+    [...]
+}
+</code></pre>
+<h2 id="adding-the-so-comm-mediaclient">Adding the SO Comm MediaClient</h2>
+<p>The SO Comm MediaClient is a library to download videos and pictures from the
+AX Visio the smartphone. E.g. you can use it to download a photo that a user
+has taken while the OpenAPI was used. Adding the MediaClient to your
+Android application is straight forward.</p>
+<p>For the Groovy DSL add the follwing line in the module/app level <code>build.gradle</code>
+file:</p>
+<pre><code class="language-groovy">dependencies {
+    implementation &quot;com.swarovskioptik.comm:SOCommMediaClient:[CURRENT_LIBRARY_VERSION]&quot;
+    [...]
+}
+</code></pre>
+<p>For the Kotlin DSL add the following line in the module/app level
+<code>build.gradle.kts</code> file:</p>
+<pre><code class="language-Kotlin">dependencies {
+    implementation(&quot;com.swarovskioptik.comm:SOCommMediaClient:[CURRENT_LIBRARY_VERSION]&quot;)
+    [...]
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../tut/using-the-example-application/" class="btn btn-neutral float-left" title="Using the example application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using-the-so-comm-outside-api/" class="btn btn-neutral float-right" title="Using the SO Comm Outside API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../tut/using-the-example-application/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../using-the-so-comm-outside-api/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

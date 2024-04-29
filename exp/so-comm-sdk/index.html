@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/intro/so-comm-sdk/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/exp/so-comm-sdk/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
     <title>SO Comm SDK - Swarovski Optik OpenAPI Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
@@ -13,8 +13,8 @@
       <script>
         // Current page data
         var mkdocs_page_name = "SO Comm SDK";
-        var mkdocs_page_input_path = "intro/so-comm-sdk.md";
-        var mkdocs_page_url = "/openapi-docu/intro/so-comm-sdk/";
+        var mkdocs_page_input_path = "exp/so-comm-sdk.md";
+        var mkdocs_page_url = "/openapi-docu/exp/so-comm-sdk/";
       </script>
     
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <p class="caption"><span class="caption-text">Explanations</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../ax-visio/">AX Visio</a>
                   </li>
@@ -67,12 +67,21 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../openapi/">OpenAPI</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../kotlin-extensions/">Kotlin Extensions</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Tutorials</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorial/how-to-add-the-so-comm-sdk/">How to add the SO Comm SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/requesting-an-api-key/">Requesting an API key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tut/using-the-example-application/">Using the example application</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/adding-the-so-comm-sdk-libraries/">Adding the SO Comm SDK libraries your application</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/using-the-so-comm-outside-api/">Using the SO Comm Outside API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how/using-kotlin-extensions/">Using Kotlin extensions</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">References</span></p>
@@ -86,9 +95,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../ref/glossary/">Glossary</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -104,7 +116,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Introduction</li>
+          <li class="breadcrumb-item">Explanations</li>
       <li class="breadcrumb-item active">SO Comm SDK</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -153,7 +165,7 @@ is provided by a Swarovski Optik device and the app has access to it.</p>
 developed: The <em>SO Comm Inside API</em> the <em>SO Comm Outside API</em>. For the
 Swarovski Optics OpenAPI only the later is relevant.</p>
 <p>An Outside App registers to use one or multiple SOContexts via the
-<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/">SoCommOutsideAPI object</a>
+<a href="../../reference/SDK/com.swarovskioptik.comm/-s-o-comm-outside-a-p-i/">SOCommOutsideAPI object</a>
 Moreover, the SOContext defines whether BLE only is sufficient or also WiFi
 will be used for transmitting data.</p>
 <p>BLE is used as initial communication technology for connection establishment
@@ -217,7 +229,7 @@ These are unencrypted <a href="https://jwt.io/introduction/">JSON Web Token (JWT
 given out by Swarovski Optik to application developers.</p>
 <p>An API key is tied to a specific set of SOContexts. For the OpenAPI usages the API key will
 grant accees to the OpenAPI and the other relevant contexts.
-See <a href="../intro/openapi/#available-contexts">OpenAPI &gt; Available Contexts</a>.</p>
+See <a href="../openapi/#available-contexts">OpenAPI &gt; Available Contexts</a>.</p>
               
             </div>
           </div><footer>
