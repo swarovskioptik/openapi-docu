@@ -1,6 +1,10 @@
 # EXIF Field Descriptions
 
-<BR>
+This page provides an overview of the EXIF data embedded in each image by the AXVISIO,
+detailing key metadata such as capture time, location, camera settings, technical specifications,
+and species identification information.
+
+
 ## General Information
 
 
@@ -15,7 +19,7 @@
 | Compression       | The compression type.                    | jpeg/H.264                  |
 | FileSize          | e.g. 6 MB                                | file size in Megabyte       |
 
-<BR>
+
 ## Date and Time Information
 
 
@@ -24,7 +28,7 @@
 | Create Date        | YYYY:MM:DD HH:mm:ss | Date&Time based on current timezone! e.g.: “2024:05:27 08:17:48” |
 | Date/Time Original | YYYY:MM:DD HH:mm:ss | e.g.: “2024:05:27 08:17:48”                                      |
 
-<BR>
+
 ## Location Information
 
 
@@ -38,7 +42,7 @@
 | GPSAltitudeRef  | e.g. Above Sea Level     | Indicates the altitude used as the reference altitude.                        |
 | GPSImgDirection | e.g. 347.96              | The direction of the image when it was captured (in degrees).                 |
 
-<BR>
+
 ## Camera Settings
 
 
@@ -55,7 +59,7 @@
 | SubjectDistance          | unsigned rational           | The approximate distance to the subject (in meters).                      |
 | SubjectArea              | detailed is described below | Indicates the location and area of the main subject in the overall scene. |
 
-<BR>
+
 ## Image Characteristics
 
 
@@ -71,7 +75,7 @@
 | XResolution               | unsigned rational                            | The horizontal resolution of the image in DPI.                                       |
 | YResolution               | unsigned rational                            | The vertical resolution of the image in DPI.                                         |
 
-<BR>
+
 ## Video Specific Information
 
 
@@ -80,11 +84,11 @@
 | Duration                  | e.g. 5 sec                                   | Duration of the video in seconds                                                                                     |
 | Video Frame Rate          | e.g. 30 fps                                  | Frame rate of the Video per second                                                                                      |
 
-<BR>
+
 ## Detailed Format Description for SubjectArea
 
-<BR>
-<BR>
+
+
 ### SubjectArea
 
 
@@ -93,11 +97,11 @@ Indicates the location and area of the main subject in the overall scene.
 The subject location and area are defined by Count values as follows:  
 Count = 2: Indicates the location of the main subject as coordinates. The first value is the X coordinate and the second is the Y coordinate.  
 Count = 3: The area of the main subject is given as a circle. The circular area is expressed as center coordinates and diameter. The first value is the center X coordinate, the second is the center Y coordinate, and the third is the diameter.  
-**Count = 4: The area of the main subject is given as a rectangle. The rectangular area is expressed as center coordinates and area dimensions. The first value is the center X coordinate, the second is the center Y coordinate, the third is the width of the area, and the fourth is the height of the area. (current used version)**
+Count = 4: The area of the main subject is given as a rectangle. The rectangular area is expressed as center coordinates and area dimensions. The first value is the center X coordinate, the second is the center Y coordinate, the third is the width of the area, and the fourth is the height of the area. (current used version)**
 
 Note that the coordinate values, width, and height are expressed in relation to the upper left as origin, prior to rotation processing as per the Rotation tag.
 
-<BR>
+
 ## Detailed Format Description for ImageDescription
 
 **BirdID:**
@@ -106,6 +110,7 @@ Note that the coordinate values, width, and height are expressed in relation to 
 Format: Top1CommonName|species id list (values separated by comma)|confidence list (values separated by comma)
 
 Example:
+
 - Canada Goose: cangoo|0.97128838|0.78138983|2158,1950,617,423|shaking|StartFocus|detSegments:0|finalSegments:1|filteredByGPS
 
 
@@ -115,4 +120,5 @@ Example:
 Format: Top1CommonName|species list (values separated by comma)|confidence list (values separated by comma)
 
 Example:
+
 - Cervus nippon: Cervus nippon,Dama dama,Cervus elaphus,Axis axis,Odocoileus virginianus|0.91542685,0.058428057,0.020147795,0.0040012943,0.0019829927

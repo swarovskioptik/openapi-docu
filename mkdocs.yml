@@ -24,3 +24,5 @@ nav:
   - Support:
     - 'support.md'
     - 'impressum.md'
+extra_css:
+  - 'css/extra.css'
