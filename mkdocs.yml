@@ -20,6 +20,7 @@ nav:
     - 'ref/api-reference.md'
     - 'ref/example-applications.md'
     - 'ref/glossary.md'
+    - 'ref/exif_field_descriptions.md'
   - Support:
     - 'support.md'
     - 'impressum.md'
