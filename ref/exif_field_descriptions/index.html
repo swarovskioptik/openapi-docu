@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://swarovskioptik.github.io/openapi-docu/ref/exif_field_descriptions/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>EXIF Field Descriptions - Swarovski Optik OpenAPI Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "EXIF Field Descriptions";
+    var mkdocs_page_input_path = "ref/exif_field_descriptions.md";
+    var mkdocs_page_url = "/openapi-docu/ref/exif_field_descriptions/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Swarovski Optik OpenAPI Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Explanations</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../exp/ax-visio/">AX Visio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../exp/so-comm-sdk/">SO Comm SDK</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../exp/openapi/">OpenAPI</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../tut/requesting-an-api-key/">Requesting an API key</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../tut/using-the-example-application/">Using the example application</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">How-To Guides</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../how/adding-the-so-comm-sdk-libraries/">Adding the SO Comm SDK libraries your application</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../how/using-the-so-comm-outside-api/">Using the SO Comm Outside API</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../how/using-kotlin-extensions/">Using Kotlin extensions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">References</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases of the SO Comm SDK</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../api-reference/">API Reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../example-applications/">Example Applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">EXIF Field Descriptions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-information">General Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#date-and-time-information">Date and Time Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#location-information">Location Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#camera-settings">Camera Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-characteristics">Image Characteristics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#video-specific-information">Video Specific Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detailed-format-description-for-subjectarea">Detailed Format Description for SubjectArea</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#subjectarea">SubjectArea</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detailed-format-description-for-imagedescription">Detailed Format Description for ImageDescription</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Support</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../support/">Getting Help</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../impressum/">Impressum</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Swarovski Optik OpenAPI Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>References &raquo;</li>
+        
+      
+    
+    <li>EXIF Field Descriptions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="exif-field-descriptions">EXIF Field Descriptions</h1>
+<p>This page provides an overview of the EXIF data embedded in each image by the AXVISIO,
+detailing key metadata such as capture time, location, camera settings, technical specifications,
+and species identification information.</p>
+<h2 id="general-information">General Information</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ImageDescription</td>
+<td>detailed is described below</td>
+<td>detailed is described below</td>
+</tr>
+<tr>
+<td>Make</td>
+<td>"Swarovski Optik"</td>
+<td></td>
+</tr>
+<tr>
+<td>Camera Model Name</td>
+<td>"AX VISIO 10x32"</td>
+<td></td>
+</tr>
+<tr>
+<td>File Name</td>
+<td>AX VISIO_AXV_yyyyMMdd-HHmmSS.fff.jpg/mp4</td>
+<td></td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>e.g. Horizontal (normal)</td>
+<td></td>
+</tr>
+<tr>
+<td>Software</td>
+<td>e.g. "com.swarovskioptik.cameraapp"</td>
+<td>package name of Inside App</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>The compression type.</td>
+<td>jpeg/H.264</td>
+</tr>
+<tr>
+<td>FileSize</td>
+<td>e.g. 6 MB</td>
+<td>file size in Megabyte</td>
+</tr>
+</tbody>
+</table>
+<h2 id="date-and-time-information">Date and Time Information</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create Date</td>
+<td>YYYY:MM:DD HH:mm:ss</td>
+<td>Date&amp;Time based on current timezone! e.g.: “2024:05:27 08:17:48”</td>
+</tr>
+<tr>
+<td>Date/Time Original</td>
+<td>YYYY:MM:DD HH:mm:ss</td>
+<td>e.g.: “2024:05:27 08:17:48”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="location-information">Location Information</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPSLatitude</td>
+<td>e.g. 47 deg 14' 37.37" N</td>
+<td>Indicates the latitude. The latitude is expressed as three RATIONAL values.</td>
+</tr>
+<tr>
+<td>GPSLatitudeRef</td>
+<td>e.g. North</td>
+<td>Indicates whether the latitude is north or south latitude.</td>
+</tr>
+<tr>
+<td>GPSLongitude</td>
+<td>e.g. 11 deg 17' 30.25" E</td>
+<td>Indicates the longitude. The longitude is expressed as three RATIONAL values.</td>
+</tr>
+<tr>
+<td>GPSLongitudeRef</td>
+<td>e.g. East</td>
+<td>Indicates whether the longitude is east or west longitude.</td>
+</tr>
+<tr>
+<td>GPSAltitude</td>
+<td>e.g. 835 m</td>
+<td>Indicates the altitude based on the reference in GPSAltitudeRef.</td>
+</tr>
+<tr>
+<td>GPSAltitudeRef</td>
+<td>e.g. Above Sea Level</td>
+<td>Indicates the altitude used as the reference altitude.</td>
+</tr>
+<tr>
+<td>GPSImgDirection</td>
+<td>e.g. 347.96</td>
+<td>The direction of the image when it was captured (in degrees).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="camera-settings">Camera Settings</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FNumber</td>
+<td>unsigned rational e.g. 2.2</td>
+<td>The actual F-number(F-stop) of lens when the image was taken.</td>
+</tr>
+<tr>
+<td>ApertureValue</td>
+<td>unsigned rational</td>
+<td>The actual aperture value of lens when the image was taken.</td>
+</tr>
+<tr>
+<td>MaxApertureValue</td>
+<td>unsigned rational</td>
+<td>The smallest F of the lens (in APEX units).</td>
+</tr>
+<tr>
+<td>FocalLength</td>
+<td>unsigned rational</td>
+<td>Focal length of lens used to take image.</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td></td>
+<td>unused - Falke Iso value in tag "ISO speed"</td>
+</tr>
+<tr>
+<td>ISOSpeed</td>
+<td>unsigned rational</td>
+<td></td>
+</tr>
+<tr>
+<td>ExposureTime</td>
+<td>e.g. 1/526 sec</td>
+<td>The exposure time (in seconds).</td>
+</tr>
+<tr>
+<td>DeviceSettingDescription</td>
+<td>unsigned rational</td>
+<td>Elevation (positive value)/depression(negative value).</td>
+</tr>
+<tr>
+<td>SubjectDistance</td>
+<td>unsigned rational</td>
+<td>The approximate distance to the subject (in meters).</td>
+</tr>
+<tr>
+<td>SubjectArea</td>
+<td>detailed is described below</td>
+<td>Indicates the location and area of the main subject in the overall scene.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image-characteristics">Image Characteristics</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BitsPerSample</td>
+<td>unsigned short/long</td>
+<td>When image format is no compression, this value shows the number of bits per component for each pixel.</td>
+</tr>
+<tr>
+<td>ImageHeight</td>
+<td>unsigned short/long</td>
+<td>Shows size of thumbnail image.</td>
+</tr>
+<tr>
+<td>ImageWidth</td>
+<td>unsigned short/long</td>
+<td>Shows size of thumbnail image.</td>
+</tr>
+<tr>
+<td>ExifImageHeight</td>
+<td>unsigned short/long</td>
+<td>Size of main image.</td>
+</tr>
+<tr>
+<td>ExifImageWidth</td>
+<td>unsigned short/long</td>
+<td>Size of main image.</td>
+</tr>
+<tr>
+<td>ColorSpace</td>
+<td>unsigned short</td>
+<td>The color space of the image.</td>
+</tr>
+<tr>
+<td>YCbCrPositioning</td>
+<td>unsigned short</td>
+<td>2 (Co-sited)</td>
+</tr>
+<tr>
+<td>XResolution</td>
+<td>unsigned rational</td>
+<td>The horizontal resolution of the image in DPI.</td>
+</tr>
+<tr>
+<td>YResolution</td>
+<td>unsigned rational</td>
+<td>The vertical resolution of the image in DPI.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="video-specific-information">Video Specific Information</h2>
+<table>
+<thead>
+<tr>
+<th>EXIF Tag</th>
+<th>Format</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duration</td>
+<td>e.g. 5 sec</td>
+<td>Duration of the video in seconds</td>
+</tr>
+<tr>
+<td>Video Frame Rate</td>
+<td>e.g. 30 fps</td>
+<td>Frame rate of the Video per second</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-format-description-for-subjectarea">Detailed Format Description for SubjectArea</h2>
+<h3 id="subjectarea">SubjectArea</h3>
+<p>Indicates the location and area of the main subject in the overall scene.</p>
+<p>The subject location and area are defined by Count values as follows:</p>
+<ul>
+<li>Count = 2: Indicates the location of the main subject as coordinates. The first value is the X coordinate and the second is the Y coordinate.  </li>
+<li>Count = 3: The area of the main subject is given as a circle. The circular area is expressed as center coordinates and diameter. The first value is the center X coordinate, the second is the center Y coordinate, and the third is the diameter.  </li>
+<li>Count = 4: The area of the main subject is given as a rectangle. The rectangular area is expressed as center coordinates and area dimensions. The first value is the center X coordinate, the second is the center Y coordinate, the third is the width of the area, and the fourth is the height of the area. (current used version)**</li>
+</ul>
+<p>Note that the coordinate values, width, and height are expressed in relation to the upper left as origin, prior to rotation processing as per the Rotation tag.</p>
+<h2 id="detailed-format-description-for-imagedescription">Detailed Format Description for ImageDescription</h2>
+<p><strong>BirdID:</strong></p>
+<p>Format: Top1CommonName|species id list (values separated by comma)|confidence list (values separated by comma)</p>
+<p>Example:</p>
+<ul>
+<li>Canada Goose: cangoo|0.97128838|0.78138983|2158,1950,617,423|shaking|StartFocus|detSegments:0|finalSegments:1|filteredByGPS</li>
+</ul>
+<p><strong>Wildlife ID:</strong></p>
+<p>Format: Top1CommonName|species list (values separated by comma)|confidence list (values separated by comma)</p>
+<p>Example:</p>
+<ul>
+<li>Cervus nippon: Cervus nippon,Dama dama,Cervus elaphus,Axis axis,Odocoileus virginianus|0.91542685,0.058428057,0.020147795,0.0040012943,0.0019829927</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../support/" class="btn btn-neutral float-right" title="Getting Help">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../glossary/" class="btn btn-neutral" title="Glossary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../glossary/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../support/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
