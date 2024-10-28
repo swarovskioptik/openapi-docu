@@ -94,10 +94,11 @@ and species identification information.
 
 Indicates the location and area of the main subject in the overall scene.
 
-The subject location and area are defined by Count values as follows:  
-Count = 2: Indicates the location of the main subject as coordinates. The first value is the X coordinate and the second is the Y coordinate.  
-Count = 3: The area of the main subject is given as a circle. The circular area is expressed as center coordinates and diameter. The first value is the center X coordinate, the second is the center Y coordinate, and the third is the diameter.  
-Count = 4: The area of the main subject is given as a rectangle. The rectangular area is expressed as center coordinates and area dimensions. The first value is the center X coordinate, the second is the center Y coordinate, the third is the width of the area, and the fourth is the height of the area. (current used version)**
+The subject location and area are defined by Count values as follows:
+
+- Count = 2: Indicates the location of the main subject as coordinates. The first value is the X coordinate and the second is the Y coordinate.  
+- Count = 3: The area of the main subject is given as a circle. The circular area is expressed as center coordinates and diameter. The first value is the center X coordinate, the second is the center Y coordinate, and the third is the diameter.  
+- Count = 4: The area of the main subject is given as a rectangle. The rectangular area is expressed as center coordinates and area dimensions. The first value is the center X coordinate, the second is the center Y coordinate, the third is the width of the area, and the fourth is the height of the area. (current used version)**
 
 Note that the coordinate values, width, and height are expressed in relation to the upper left as origin, prior to rotation processing as per the Rotation tag.
 
