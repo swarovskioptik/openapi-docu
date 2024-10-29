@@ -107,19 +107,38 @@ Note that the coordinate values, width, and height are expressed in relation to 
 
 **BirdID:**
 
-
 Format: Top1CommonName|species id list (values separated by comma)|confidence list (values separated by comma)
 
-Example:
+BirdID:
 
-- Canada Goose: cangoo|0.97128838|0.78138983|2158,1950,617,423|shaking|StartFocus|detSegments:0|finalSegments:1|filteredByGPS
+Top1 Common Name, results using eBird 6-letter code and classifier score/confidence
+e.g. cangoo for Canada Goose
+
+Format:
+
+Top1CommonName|species code list (values separated by comma)|classifier confidence list (values separated by comma)|detector confidence list (values separated by comma)|detector boxes (each box upper left coordinates + width and height;  x,y,w,h)|CameraShake|AF state|Number of Detector Segments|Number of final segments|Filtered by GPS|majority vote yes/no|did move focus wheel|
+
+Examples: 
+
+Bullfinch|eurbul|0.97128838|0.78138983|2158,1950,617,423|shaking|StartFocus|detSegments:0|finalSegments:1|filteredByGPS|
+
+|||0.0|2450,1890,1500,1500|notShaking|StartFocus|detSegments:0|finalSegments:0|notFilteredByGPS|
+
+Falcon|perfal|0.23521970|0.31085718|1893,1981,418,616|notShaking|FocusLocked|detSegments:1|finalSegments:0|filteredByGPS|
+
+European+Robin|eurrob1,rebfly,japrob2,carcha1,chcgna1|0.96630859,0.00116730,0.00112247,0.00054932,0.00029635|0.9461405|2436,1696,390,391|notShaking|StartFocus|detSegments:0|finalSegments:1|notFilteredByGPS|withoutMajorityVote|focusWheelNotMoved|
+
+European+Robin|eurrob1,japrob2,carcha1,rebfly,chcgna1|0.95556641,0.00307655,0.00095320,0.00088835,0.00057364|0.9274099|2395,1608,465,422|notShaking|FocusFailed|detSegments:0|finalSegments:1|notFilteredByGPS|withoutMajorityVote|focusWheelMoved|
 
 
 **Wildlife ID:**
 
+Format:
 
-Format: Top1CommonName|species list (values separated by comma)|confidence list (values separated by comma)
+Top1CommonName|species list (values separated by comma)|confidence list (values separated by comma)
 
+Top1CommonName in the language used to show on the display (eng, german, latin)
+specie in species list always in the same language (latin or english)
 Example:
 
-- Cervus nippon: Cervus nippon,Dama dama,Cervus elaphus,Axis axis,Odocoileus virginianus|0.91542685,0.058428057,0.020147795,0.0040012943,0.0019829927
+Cervus nippon|Cervus nippon,Dama dama,Cervus elaphus,Axis axis,Odocoileus virginianus|0.91542685,0.058428057,0.020147795,0.0040012943,0.0019829927

@@ -11,7 +11,7 @@
 set -e
 set -x
 
-SDK_DIR=../falke-sdk-android
+SDK_DIR=../Falke-SDK-Android
 
 # Checks
 if ! test -f scripts/generate-reference.sh; then
